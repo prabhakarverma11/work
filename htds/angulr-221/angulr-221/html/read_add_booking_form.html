@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="utf-8"/>
+    <title>Html version | Angulr</title>
+    <meta name="description"
+          content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="../libs/assets/animate.css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/assets/simple-line-icons/css/simple-line-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+
+    <link rel="stylesheet" href="css/font.css" type="text/css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sevillana" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/read.css" type="text/css"/>
+
+    <style>
+
+    </style>
+
+
+</head>
+<body class="no-scroll">
+<div class="app app-header-fixed app-aside-fixed app-aside-folded">
+
+
+    <!-- header -->
+    <header id="header" class="app-header navbar" role="menu">
+        <!-- navbar header -->
+        <div class="navbar-header box-shadow bg-info dker">
+            <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </button>
+            <button class="pull-right hide" ui-toggle-class="off-screen" target=".app-aside" ui-scroll="app">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </button>
+            <!-- brand -->
+            <a href="#/" class="navbar-brand text-lt">
+                <!--<i class="fa fa-btc"></i>-->
+                <!--<img src="img/logo.png" alt="." class="hide">-->
+                <span class="logo-text ">R</span>
+                <span class="hidden-folded m-l-xs logo-text">Read</span>
+            </a>
+            <!-- / brand -->
+        </div>
+        <!-- / navbar header -->
+
+        <!-- navbar collapse -->
+        <div class="collapse pos-rlt navbar-collapse box-shadow bg-info dker">
+            <!-- buttons -->
+            <div class="nav navbar-nav hidden-xs ">
+                <a href="#" class="btn no-shadow navbar-btn hide" ui-toggle-class="app-aside-folded" target=".app">
+                    <i class="fa fa-dedent fa-fw text"></i>
+                    <i class="fa fa-indent fa-fw text-active"></i>
+                </a>
+                <a href="#" class="btn no-shadow navbar-btn">
+                    <i class="icon-home fa-fw"></i>
+                </a>
+            </div>
+            <!-- / buttons -->
+
+            <!-- link and dropdown -->
+            <ul class="nav navbar-nav hidden-xs">
+                <!--<li class="dropdown pos-stc">-->
+                <!--<a href="#" data-toggle="dropdown" class="dropdown-toggle">-->
+                <!--<span>Mega</span>-->
+                <!--<span class="caret"></span>-->
+                <!--</a>-->
+                <!--<div class="dropdown-menu wrapper w-full bg-white">-->
+                <!--<div class="row">-->
+                <!--<div class="col-sm-4">-->
+                <!--<div class="m-l-xs m-t-xs m-b-xs font-bold">Pages <span-->
+                <!--class="badge badge-sm bg-success">10</span></div>-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Profile</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i-->
+                <!--class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Post</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Search</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Invoice</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i-->
+                <!--class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Price</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Lock-->
+                <!--screen</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign in</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign up</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 b-l b-light">-->
+                <!--<div class="m-l-xs m-t-xs m-b-xs font-bold">UI Kits <span-->
+                <!--class="label label-sm bg-primary">12</span></div>-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Buttons</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Icons-->
+                <!--<span class="badge badge-sm bg-warning">1000+</span></a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i-->
+                <!--class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Grid</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Widgets</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Bootstap</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sortable</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Portlet</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Timeline</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 b-l b-light">-->
+                <!--<div class="m-l-xs m-t-xs m-b-sm font-bold">Analysis</div>-->
+                <!--<div class="text-center">-->
+                <!--<div class="inline">-->
+                <!--<div ui-jq="easyPieChart" ui-options="{ percent: 65, lineWidth: 50,-->
+                <!--trackColor: '#e8eff0', barColor: '#23b7e5', scaleColor: false, size: 100,-->
+                <!--rotate: 90, lineCap: 'butt', animate: 2000 }">-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Leads</span></a>
+                </li>
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Accounts</span></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Sales</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Contacts</a></li>
+                        <li><a href translate="header.navbar.new.USER">Companies</a></li>
+                        <li><a href translate="header.navbar.new.USER">Opportunity</a></li>
+                        <li><a href translate="header.navbar.new.USER">Calendar</a></li>
+                        <li><a href translate="header.navbar.new.USER">Tasks</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Marketing</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Campaigns</a></li>
+                        <li><a href translate="header.navbar.new.USER">Triggers</a></li>
+                        <li><a href translate="header.navbar.new.USER">WorkflowRules</a></li>
+                        <li><a href translate="header.navbar.new.USER">Landing Pages</a></li>
+                        <li><a href translate="header.navbar.new.USER">Email Templates</a></li>
+                        <li><a href translate="header.navbar.new.USER">Social</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown hide">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Support</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Cases</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Cases</span></a>
+                </li>
+                <!--<li class="">-->
+                <!--<a href="#"><span translate="header.navbar.new.NEW">Projects</span></a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                <!--<a href="#"><span translate="header.navbar.new.NEW">Documents</span></a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                <!--<a href="#"><span translate="header.navbar.new.NEW">Activities</span></a>-->
+                <!--</li>-->
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Reports</span></a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW"><i class="fa  fa-ellipsis-h"></i></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Projects</a></li>
+                        <li><a href translate="header.navbar.new.USER">Documents</a></li>
+                        <li><a href translate="header.navbar.new.USER">Activities</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown hide">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Settings</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Setup</a></li>
+                        <li><a href translate="header.navbar.new.USER">Users & Roles</a></li>
+                        <li><a href translate="header.navbar.new.USER">Permissions</a></li>
+                        <li><a href translate="header.navbar.new.USER">Customization</a></li>
+                        <li><a href translate="header.navbar.new.USER">Automation</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown hide">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Help</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Help Desk</a></li>
+                        <li><a href translate="header.navbar.new.USER">Tutorials</a></li>
+                        <li><a href translate="header.navbar.new.USER">Feedback</a></li>
+                    </ul>
+                </li>
+                <!--<li class="dropdown">-->
+                <!--<a href="#" data-toggle="dropdown" class="dropdown-toggle">-->
+                <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                <!--<span translate="header.navbar.new.NEW">New</span> <span class="caret"></span>-->
+                <!--</a>-->
+                <!--<ul class="dropdown-menu" role="menu">-->
+                <!--<li><a href="#" translate="header.navbar.new.PROJECT">Projects</a></li>-->
+                <!--<li>-->
+                <!--<a href>-->
+                <!--<span class="badge bg-info pull-right">5</span>-->
+                <!--<span translate="header.navbar.new.TASK">Task</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li><a href translate="header.navbar.new.USER">User</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li>-->
+                <!--<a href>-->
+                <!--<span class="badge bg-danger pull-right">4</span>-->
+                <!--<span translate="header.navbar.new.EMAIL">Email</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</li>-->
+            </ul>
+            <!-- / link and dropdown -->
+
+            <!-- nabar right -->
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li class="hidden-xs">-->
+                <!--<a class="js-toggle-requestfullscreen">-->
+                <!--<i class="fa fa-expand fa-fw "></i>-->
+                <!--</a>-->
+                <!--<a class="js-toggle-exitfullscreen" style="display:none;">-->
+                <!--<i class="fa fa-compress fa-fw "></i>-->
+                <!--</a>-->
+                <!--</li>-->
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <i class="icon-bell fa-fw"></i>
+                        <span class="visible-xs-inline">Notifications</span>
+                        <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+                    </a>
+                    <!-- dropdown -->
+                    <div class="dropdown-menu w-xl"><!-- animated fadeIn -->
+                        <div class="panel bg-white">
+                            <div class="panel-heading b-light bg-light">
+                                <strong>You have <span>2</span> notifications</strong>
+                            </div>
+                            <div class="list-group">
+                                <a href class="list-group-item">
+                    <span class="pull-left m-r thumb-sm">
+                      <img src="img/a0.jpg" alt="..." class="img-circle">
+                    </span>
+                                    <span class="clear block m-b-none">
+                      Use awesome animate.css<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                                </a>
+                                <a href class="list-group-item">
+                    <span class="clear block m-b-none">
+                      1.0 initial released<br>
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                                </a>
+                            </div>
+                            <div class="panel-footer text-sm">
+                                <a href class="pull-right"><i class="fa fa-cog"></i></a>
+                                <a href="#notes" data-toggle="class:show animated fadeInRight">See all the
+                                    notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / dropdown -->
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-left m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="img/a0.jpg" alt="...">
+                <i class="on md b-white bottom"></i>
+              </span>
+                        <span class="visible-xs">John.Smith</span> <b class=" visible-xs caret"></b>
+                    </a>
+                    <!-- dropdown -->
+                    <ul class="dropdown-menu  w"><!--animated fadeIn-->
+                        <li class="wrapper b-b m-b-sm bg-light m-t-n-xs">
+                            <div>
+                                <p>300mb of 500mb used</p>
+                            </div>
+                            <div class="progress progress-xs m-b-none dker">
+                                <div class="progress-bar progress-bar-info" data-toggle="tooltip"
+                                     data-original-title="50%" style="width: 50%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href>
+                                <span class="badge bg-danger pull-right">30%</span>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="app.page.profile">Profile</a>
+                        </li>
+                        <li>
+                            <a ui-sref="app.docs">
+                                <span class="label bg-info pull-right">new</span>
+                                Help
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a ui-sref="access.signin">Logout</a>
+                        </li>
+                    </ul>
+                    <!-- / dropdown -->
+                </li>
+            </ul>
+            <!-- / navbar right -->
+
+            <!-- search form -->
+            <form class="navbar-form navbar-form-sm navbar-right shift navbar-search" ui-shift="prependTo"
+                  data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" ng-model="selected"
+                               typeahead="state for state in states | filter:$viewValue | limitTo:8"
+                               class="form-control input-sm bg-light no-border rounded padder"
+                               placeholder="Search projects...">
+                        <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
+                    </div>
+                </div>
+            </form>
+            <!-- / search form -->
+
+        </div>
+        <!-- / navbar collapse -->
+    </header>
+    <!-- / header -->
+
+    <!-- content -->
+    <div id="content" class="app-content m-n " role="main">
+        <div class="app-content-body app-content-full ">
+
+            <div class="vbox">
+                <div class="bg-light lter b-b wrapper-md ">
+                    <div class="clearfix animated slideInDown">
+                        <h1 class="m-n font-thin h3 pull-left dropdown">
+                            <!--<a href="#" data-toggle="dropdown" class="dropdown-toggle">-->
+                            <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                            <span translate="header.navbar.new.NEW">New Booking Form</span>
+                            <!--</a>-->
+                        </h1>
+
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <a class="btn btn-default ">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-row ">
+                    <div class="cell w-full">
+                        <div class="cell-inner">
+
+                            <div class="wrapper-md read-form-block ">
+                                <form role="form" lpformnum="1" class="">
+                                    <div class="panel panel-default no-border no-shadow">
+                                        <div class="panel-heading">Booking Details</div>
+                                        <div class="panel-body">
+
+                                            <div class="col-sm-6 form-element">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label " for="bf_zone">
+                                                        Zone
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" id="bf_zone"
+                                                                   autocomplete="off">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-default" tabindex="-1"
+                                                                        type="button">
+                                                                    <i class="fa fa-building-o"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required" for="bf_center">
+                                                        Center
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" id="bf_center"
+                                                                   autocomplete="off">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-default js-center-select-button"
+                                                                        tabindex="-1" type="button">
+                                                                    <i class="fa fa-building-o"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label" for="bf_vendor">
+                                                        Vendor
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" id="bf_vendor"
+                                                                   autocomplete="off">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-default" tabindex="-1"
+                                                                        type="button">
+                                                                    <i class="fa fa-file-text-o"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required"
+                                                           for="bf_submission_date">
+                                                        Submission Date
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_submission_date" autocomplete="off">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-default" tabindex="-1"
+                                                                        type="button">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required"
+                                                           for="bf_booking_date">
+                                                        Booking Date
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_booking_date" autocomplete="off">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-default" tabindex="-1"
+                                                                        type="button">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required"
+                                                           for="bf_booking_channel">
+                                                        Booking Channel
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+
+                                                        <div class="input-group">
+                                                            <!--<select name="account" class="form-control m-b"-->
+                                                            <!--id="bf_booking_channel">-->
+                                                            <!--<option>option 1</option>-->
+                                                            <!--<option>option 2</option>-->
+                                                            <!--<option>option 3</option>-->
+                                                            <!--<option>option 4</option>-->
+                                                            <!--</select>-->
+                                                            <select ui-jq="chosen" name="account"
+                                                                    class="form-control m-b"
+                                                                    id="bf_booking_channel">
+                                                                <option value="CA">California</option>
+                                                                <option value="NV">Nevada</option>
+                                                                <option value="OR">Oregon</option>
+                                                                <option value="WA">Washington</option>
+                                                                <option value="AZ">Arizona</option>
+                                                                <option value="CO">Colorado</option>
+                                                                <option value="ID">Idaho</option>
+                                                                <option value="MT">Montana</option>
+                                                                <option value="NE">Nebraska</option>
+                                                                <option value="NM">New Mexico</option>
+                                                                <option value="ND">North Dakota</option>
+                                                                <option value="UT">Utah</option>
+                                                                <option value="WY">Wyoming</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required" for="bf_scheme_name">
+                                                        Scheme Name
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_scheme_name" autocomplete="off">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-default" tabindex="-1"
+                                                                        type="button">
+                                                                    <i class="fa fa-file-text-o"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required"
+                                                           for="bf_bookingform_lot">
+                                                        BookingForm Lot
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_bookingform_lot"
+                                                                   autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required"
+                                                           for="bf_bookingform_number">
+                                                        BookingForm Number
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_bookingform_number"
+                                                                   autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-6 form-element">
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required"
+                                                           for="bf_payment_mode">
+                                                        Payment Mode
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+
+                                                        <div class="input-group">
+                                                            <select name="account" class="form-control m-b"
+                                                                    id="bf_payment_mode">
+                                                                <option>option 1</option>
+                                                                <option>option 2</option>
+                                                                <option>option 3</option>
+                                                                <option>option 4</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required">
+                                                        Cheque Number
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   autocomplete="off">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-default" tabindex="-1"
+                                                                        type="button">
+                                                                    <i class="fa fa-file-text-o"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required"
+                                                           for="bf_cheque_date">
+                                                        Cheque Date
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_cheque_date" autocomplete="off">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-default" tabindex="-1"
+                                                                        type="button">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default no-border no-shadow">
+                                        <div class="panel-heading">Reader Details</div>
+                                        <div class="panel-body">
+                                            <div class="col-sm-6 form-element">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required" for="bf_reader_name">
+                                                        Full Name
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_reader_name"
+                                                                   autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label" for="bf_house_no">
+                                                        House No.
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_house_no"
+                                                                   autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 form-element">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label" for="bf_phone_number">
+                                                        Phone Number
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_phone_number"
+                                                                   autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label required" for="bf_mobile">
+                                                        Mobile
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_mobile"
+                                                                   autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label" for="bf_dob">
+                                                        Date of Birth
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_dob"
+                                                                   autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 control-label" for="bf_email">
+                                                        Email Address
+                                                    </label>
+                                                    <div class="col-sm-8 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_email"
+                                                                   autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default no-border no-shadow">
+                                        <div class="panel-heading">Vertical Form Details</div>
+                                        <div class="panel-body">
+                                            <div class="col-sm-8 form-element">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 control-label required" for="bf_column1">
+                                                        Column 1
+                                                    </label>
+                                                    <div class="col-sm-9 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_column1"
+                                                                   autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 control-label" for="bf_column2">
+                                                        Column 2
+                                                    </label>
+                                                    <div class="col-sm-9 form-input-element">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control"
+                                                                   id="bf_column2"
+                                                                   autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- /content -->
+
+    <!-- footer -->
+    <div class="footer navbar navbar-fixed-bottom bg-light lt b-t m-n">
+        <ul class="nav nav-tabs nav-md pull-left ng-scope">
+            <li><a href=""><i class="icon-star m-r-xs"></i> Getting Started</a></li>
+            <li><a href=""><i class="icon-question m-r-xs"></i> Help Center</a></li>
+            <li><a href=""><i class="icon-earphones-alt m-r-xs"></i> Contact Us</a></li>
+
+        </ul>
+        <ul class="nav nav-tabs nav-md pull-right ng-scope no-border m-n">
+            <li class="dropdown dropup b-l" dropdown="">
+                <a href="" class="dropdown-toggle m-n" data-toggle="dropdown" aria-expanded="false">
+                    <i class=" icon-clock" style="font-size: 16px;"></i></a>
+                <div class="dropdown-menu w-xl pull-right"><!-- animated fadeIn -->
+                    <div class="panel bg-white">
+                        <div class="panel-heading b-light bg-light ">
+                            <strong>Recent Items</strong>
+                        </div>
+                        <div class="list-group">
+                            <a href="" class="list-group-item">
+                                <span class="pull-left m-r thumb-sm">
+                                  <img src="img/a0.jpg" alt="..." class="img-circle">
+                                </span>
+                                <span class="clear block m-b-none">
+                                  Use awesome animate.css<br>
+                                  <small class="text-muted">10 minutes ago</small>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                    <i class="fa fa-phone-square fa-fw m-r text-md"></i> latest lead<br>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                  <i class="fa fa-paper-plane-o fa-fw m-r text-md"></i> product asdf<br>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                  1.0 initial released<br>
+                                    <small class="text-muted">1 hour ago</small>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                  1.0 initial released<br>
+                                    <small class="text-muted">1 hour ago</small>
+                                </span>
+                            </a>
+                        </div>
+                        <!--<div class="panel-footer text-sm">-->
+                        <!--<a href="" class="pull-right"><i class="fa fa-cog"></i></a>-->
+                        <!--<a href="#notes" data-toggle="class:show animated fadeInRight">See all the-->
+                        <!--notifications</a>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </li>
+            <li class="hidden-xs b-l">
+                <a class="js-toggle-requestfullscreen">
+                    <i class="fa fa-expand fa-fw "></i>
+                </a>
+                <a class="js-toggle-exitfullscreen" style="display:none;">
+                    <i class="fa fa-compress fa-fw "></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- / footer -->
+
+</div>
+
+
+<div class="modal fade read-form-lookup-modal" id="center-select-modal" tabindex="-1" role="dialog"
+     data-backdrop="static">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content wrapper-lg" style="padding-top: 20px;">
+            <div class="modal-header no-padder" style="padding-bottom: 10px !important;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="modal-close-button">&times;</span>
+                </button>
+                <div class="input-group col-sm-5 search-field">
+                    <input type="text" class="form-control " placeholder="Search">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn bg-white btn-flat">
+                            <!--<i class="fa fa-search"></i>-->
+                            <i class="icon-magnifier"></i>
+                        </button>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="modal-body no-padder">
+
+                <table class="table table-striped dataTable no-footer" id="DataTables_Table_0"
+                       role="grid" aria-describedby="DataTables_Table_0_info" style="">
+                    <thead>
+                    <tr role="row">
+                        <td style="width: 50px;">
+                        </td>
+                        <th style="width: 182px;" class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0"
+                            rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column descending"
+                            aria-sort="ascending">Rendering engine
+                        </th>
+                        <th style="width: 237px;" class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                            rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Browser
+                        </th>
+                        <th style="width: 236px;" class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                            rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">
+                            Platform(s)
+                        </th>
+                        <th style="width: 127px;" class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                            rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">
+                            Engine version
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr role="row" class="odd">
+                        <td>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="sorting_1">Gecko</td>
+                        <td>Firefox 1.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.7</td>
+
+                    </tr>
+                    <tr role="row" class="even">
+                        <td>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="sorting_1">Gecko</td>
+                        <td>Firefox 1.5</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.8</td>
+
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="sorting_1">Gecko</td>
+                        <td>Firefox 2.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.8</td>
+
+                    </tr>
+                    <tr role="row" class="even">
+                        <td>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="sorting_1">Gecko</td>
+                        <td>Firefox 3.0</td>
+                        <td>Win 2k+ / OSX.3+</td>
+                        <td>1.9</td>
+
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="sorting_1">Gecko</td>
+                        <td>Camino 1.0</td>
+                        <td>OSX.2+</td>
+                        <td>1.8</td>
+
+                    </tr>
+                    <tr role="row" class="even">
+                        <td>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="sorting_1">Gecko</td>
+                        <td>Camino 1.5</td>
+                        <td>OSX.3+</td>
+                        <td>1.8</td>
+
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="sorting_1">Gecko</td>
+                        <td>Netscape 7.2</td>
+                        <td>Win 95+ / Mac OS 8.6-9.2</td>
+                        <td>1.7</td>
+
+                    </tr>
+                    <tr role="row" class="even">
+                        <td>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="sorting_1">Gecko</td>
+                        <td>Netscape Browser 8</td>
+                        <td>Win 98SE+</td>
+                        <td>1.7</td>
+
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="sorting_1">Gecko</td>
+                        <td>Netscape Navigator 9</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.8</td>
+
+                    </tr>
+                    <tr role="row" class="even">
+                        <td>
+                            <div class="radio">
+                                <label class="i-checks">
+                                    <input type="radio" name="a" value="option1">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </td>
+                        <td class="sorting_1">Gecko</td>
+                        <td>Mozilla 1.0</td>
+                        <td>Win 95+ / OSX.1+</td>
+                        <td>1</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class=" b-t clearfix">
+                    <div class="pull-right m-t">
+                        <a class="btn btn-flat"><i class="fa fa-chevron-left"></i></a>
+                        <span>1 of 2</span>
+                        <a class="btn btn-flat"><i class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script src="../libs/jquery/jquery/dist/jquery.js"></script>
+<script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/ui-load.js"></script>
+<script src="js/ui-jp.config.js"></script>
+<script src="js/ui-jp.js"></script>
+<script src="js/ui-nav.js"></script>
+<script src="js/ui-toggle.js"></script>
+<script src="js/ui-client.js"></script>
+<script src="js/jquery.fullscreen.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+<script>
+
+    $(".js-center-select-button").click(function (e) {
+        e.preventDefault();
+
+        $("#center-select-modal").modal();
+
+    });
+
+    $(document).ready(function () {
+//        $("#bf_booking_channel").select2({});
+    });
+
+
+</script>
+
+</body>
+</html>

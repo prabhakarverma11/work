@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swachh Public Toilets: Ratings and Reviews</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link>
+
+    </link>
+    <script>
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+        var map;
+        var infowindow;
+        var delhiLat = 28.612308;
+        var delhiLng = 77.231054;
+        var data = [];
+        function initMap() {
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: delhiLat, lng: delhiLng},
+                zoom: 10
+            });
+
+            infowindow = new google.maps.InfoWindow();
+
+            var request = {
+                location: map.getCenter(),
+                radius: '10',
+                query: 'Swachh public toilets'
+            };
+
+            var service = new google.maps.places.PlacesService(map);
+            service.textSearch(request, callbackSearch);
+
+
+//            $.ajax({
+//                type: "GET",
+//                url: "data.txt",
+//                dataType: "text",
+//                success: function (data) {
+//                    processData(data);
+//                }
+//            });
+        }
+
+        function processData(data) {
+            var dataArr = data.split("\n");
+
+            dataArr.forEach(function (item) {
+                var lat = item.split(",")[0];
+                var lng = item.split(",")[1];
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: {lat: parseFloat(lat), lng: parseFloat(lng)},
+                    title: "My Map",
+                    draggable: true,
+                    animation: google.maps.Animation.DROP
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.setContent('<p>Marker Location:' + marker.getPosition() + '</p>');
+                    infowindow.open(map, this);
+                });
+            });
+        }
+
+        function callbackSearch(results, status) {
+            console.log(results);
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+
+                results.forEach(function (result) {
+//                    var marker = new google.maps.Marker({
+//                        map: map,
+//                        place: {
+//                            placeId: result.place_id,
+//                            location: result.geometry.location
+//                        }
+//                    });
+//                    google.maps.event.addListener(marker, 'click', function () {
+//                        infowindow.setContent('<p>Marker Location:' + marker.getPlace()["placeId"] + '</p>');
+//                        infowindow.open(map, this);
+
+                    var service = new google.maps.places.PlacesService(map);
+
+                    service.getDetails({placeId: result.place_id}, callbackDetails);
+//                    });
+                });
+            }
+        }
+
+        function callbackDetails(result, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                console.log(result);
+                var marker = new google.maps.Marker({
+                    map: map,
+                    place: {
+                        placeId: result.place_id,
+                        location: result.geometry.location
+                    }
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    console.log("marker");
+                    infowindow.setContent('<div class="row" style="margin: 5px">' +
+                        '<p>Name:' + result.name + '</p>' +
+                        '<p>Address:' + result.formatted_address + '</p>' +
+//                        '<p>Rating:' + result.rating + '</p>' +
+//                        '<p>Reviews:' + result.reviews + '</p>' +
+//                        '<p>Opening Hours:' +
+//                        '<ul>' +
+//                        result.opening_hours.weekday_text.map(function (item) {
+//                            return '<li>' + item.split(",")[0] + '</li>';
+//                        }) +
+//                        '</ul>' +
+//                        '</p>' +
+                        '</div>'
+                    );
+                    infowindow.open(map, this);
+                    $("#overall_rating").find("span").html(result.rating?result.rating:"NA");
+                    $("#reviews_list").html(result.reviews ? result.reviews.map(function (item) {
+                        return '<li class="list-group-item" style="border: 1px solid grey">' +
+                            '<div>' +
+                            '<strong>Author:</strong>' +
+                            '<a href="' +
+                            item.author_url
+                            + '">' +
+                            item.author_name +
+                            '</a></div>' +
+                            '<div>' +
+                            '<strong>Rating:</strong>' +
+                            item.rating +
+                            '</div>' +
+                            '<div>' +
+                            '<strong>Review:</strong>' +
+                            item.text +
+                            '</div>' +
+                            '</li>'
+                    }) : "NA");
+                })
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE6hMNFUb_MgX1aVvtnpAu52mS_9pZ_Zs&libraries=places&callback=initMap"
+            async defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="container" style="background-color: rgba(241,240,239,0.51)">
+<div class="row" style="height: 10%;font-size: x-large;text-align: center">Swachh Public Toilets: Ratings and Reviews
+</div>
+<div class="row" style="height: 85%">
+    <div class="col-md-6" style="height: 100%">
+        <div id="map" style="border: 1px solid black"></div>
+    </div>
+    <div class="col-md-offset-1 col-md-5">
+        <div class="row" id="overall_rating"><strong>Rating:</strong><span>4.4</span></div>
+        <div class="row" id="reviews" style="">
+            <strong>Reviews:</strong>
+            <div style="max-height: 480px;height: 100%;overflow-y: scroll">
+                <ul class="list-group" id="reviews_list">
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+                    <li class="list-group-item" style="border: 1px solid grey">
+                        <div><strong>Rating:</strong> 1.1</div>
+                        <div>It needs improvement but I am happy that it is located on Google</div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+
+
+
+https://maps.googleapis.com/maps/api/place/radarsearch/json?location=28.4572922251,76.9900665774&radius=500&type=Public+Bathroom&key=AIzaSyDE6hMNFUb_MgX1aVvtnpAu52mS_9pZ_Zs
+
+https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJv3wq1nQVDTkR8Jk8Zcfd1SU&key=AIzaSyDE6hMNFUb_MgX1aVvtnpAu52mS_9pZ_Zs
+ChIJv3wq1nQVDTkR8Jk8Zcfd1SU

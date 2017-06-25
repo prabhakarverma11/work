@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place searches</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            /*margin: 10px 20px;*/
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+        var map;
+        var infowindow;
+        var delhiLat = 28.612308;
+        var delhiLng = 77.231054;
+        var data = [];
+        function initMap() {
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: delhiLat, lng: delhiLng},
+                zoom: 10
+            });
+
+            infowindow = new google.maps.InfoWindow();
+            var request = {
+                location: {lat: parseFloat(28.5864874), lng: parseFloat(77.0487695)},
+                query: "Swachh+Public+Toilet",
+                radius: 50
+            };
+
+            var service = new google.maps.places.PlacesService(map);
+
+            service.textsearch(request, callback);
+
+//            $.ajax({
+//                type: "GET",
+//                url: "data.txt",
+//                dataType: "text",
+//                success: function (data) {
+////                    alert(data);
+//                    processData(data);
+//                }
+//            });
+        }
+        function processData(data) {
+            var dataArr = data.split("\n");
+
+            dataArr.forEach(function (item) {
+                var lat = item.split(",")[0];
+                var lng = item.split(",")[1];
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    place: {
+                        placeId: "dasd",
+                        location: {lat: parseFloat(28.5864874), lng: parseFloat(77.0487695)}
+                    }
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.setContent('<p>Marker Location:' + marker.getPosition() + '</p>');
+                    infowindow.open(map, this);
+                });
+
+//                var request = {
+//                    location: {lat: parseFloat(lat), lng: parseFloat(lng)},
+//                    radius: '10'
+//                };
+//
+//                var service = new google.maps.places.PlacesService(map);
+//
+//                service.nearbySearch(request, callback);
+            });
+//            alert(dataArr[0]);
+        }
+
+        function callback(results, status) {
+            console.log(results);
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                var place = results[0];
+                var marker = new google.maps.Marker({
+                    map: map,
+                    place: {
+                        placeId: results[0].place_id,
+                        location: results[0].geometry.location
+                    }
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+                        'Place ID: ' + place.place_id + '<br>' +
+                        place.formatted_address + '</div>');
+                    infowindow.open(map, this);
+                });
+//                var div = document.getElementById("place-ids");
+//                var input = document.createElement("input");
+//                input.setAttribute("id", results[0].place_id);
+//                input.setAttribute("value", results[0].geometry.location);
+//                div.appendChild(input);
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE6hMNFUb_MgX1aVvtnpAu52mS_9pZ_Zs&libraries=places&callback=initMap"
+            async defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+<div class="row" style="height: 10%"></div>
+<div class="row" style="height: 85%">
+    <div id="map" class="col-md-6"></div>
+    <div id="place-ids"></div>
+</div>
+
+</body>
+
+</html>

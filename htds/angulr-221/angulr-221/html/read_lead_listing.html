@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="utf-8"/>
+    <title>Html version | Angulr</title>
+    <meta name="description"
+          content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="../libs/assets/animate.css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/assets/simple-line-icons/css/simple-line-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+
+    <link rel="stylesheet" href="css/font.css" type="text/css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sevillana" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/read.css" type="text/css"/>
+
+    <style>
+
+    </style>
+
+
+</head>
+<body class="no-scroll">
+<div class="app app-header-fixed app-aside-fixed app-aside-folded">
+
+
+    <!-- header -->
+    <header id="header" class="app-header navbar" role="menu">
+        <!-- navbar header -->
+        <div class="navbar-header box-shadow bg-info dker">
+            <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </button>
+            <button class="pull-right hide" ui-toggle-class="off-screen" target=".app-aside" ui-scroll="app">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </button>
+            <!-- brand -->
+            <a href="#/" class="navbar-brand text-lt">
+                <!--<i class="fa fa-btc"></i>-->
+                <!--<img src="img/logo.png" alt="." class="hide">-->
+                <span class="logo-text ">R</span>
+                <span class="hidden-folded m-l-xs logo-text">Read</span>
+            </a>
+            <!-- / brand -->
+        </div>
+        <!-- / navbar header -->
+
+        <!-- navbar collapse -->
+        <div class="collapse pos-rlt navbar-collapse box-shadow bg-info dker">
+            <!-- buttons -->
+            <div class="nav navbar-nav hidden-xs ">
+                <a href="#" class="btn no-shadow navbar-btn hide" ui-toggle-class="app-aside-folded" target=".app">
+                    <i class="fa fa-dedent fa-fw text"></i>
+                    <i class="fa fa-indent fa-fw text-active"></i>
+                </a>
+                <a href="#" class="btn no-shadow navbar-btn">
+                    <i class="icon-home fa-fw"></i>
+                </a>
+            </div>
+            <!-- / buttons -->
+
+            <!-- link and dropdown -->
+            <ul class="nav navbar-nav hidden-xs">
+                <!--<li class="dropdown pos-stc">-->
+                <!--<a href="#" data-toggle="dropdown" class="dropdown-toggle">-->
+                <!--<span>Mega</span>-->
+                <!--<span class="caret"></span>-->
+                <!--</a>-->
+                <!--<div class="dropdown-menu wrapper w-full bg-white">-->
+                <!--<div class="row">-->
+                <!--<div class="col-sm-4">-->
+                <!--<div class="m-l-xs m-t-xs m-b-xs font-bold">Pages <span-->
+                <!--class="badge badge-sm bg-success">10</span></div>-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Profile</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i-->
+                <!--class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Post</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Search</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Invoice</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i-->
+                <!--class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Price</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Lock-->
+                <!--screen</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign in</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign up</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 b-l b-light">-->
+                <!--<div class="m-l-xs m-t-xs m-b-xs font-bold">UI Kits <span-->
+                <!--class="label label-sm bg-primary">12</span></div>-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Buttons</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Icons-->
+                <!--<span class="badge badge-sm bg-warning">1000+</span></a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i-->
+                <!--class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Grid</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Widgets</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Bootstap</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sortable</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Portlet</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Timeline</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 b-l b-light">-->
+                <!--<div class="m-l-xs m-t-xs m-b-sm font-bold">Analysis</div>-->
+                <!--<div class="text-center">-->
+                <!--<div class="inline">-->
+                <!--<div ui-jq="easyPieChart" ui-options="{ percent: 65, lineWidth: 50,-->
+                <!--trackColor: '#e8eff0', barColor: '#23b7e5', scaleColor: false, size: 100,-->
+                <!--rotate: 90, lineCap: 'butt', animate: 2000 }">-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Leads</span></a>
+                </li>
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Accounts</span></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Sales</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Contacts</a></li>
+                        <li><a href translate="header.navbar.new.USER">Companies</a></li>
+                        <li><a href translate="header.navbar.new.USER">Opportunity</a></li>
+                        <li><a href translate="header.navbar.new.USER">Calendar</a></li>
+                        <li><a href translate="header.navbar.new.USER">Tasks</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Marketing</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Campaigns</a></li>
+                        <li><a href translate="header.navbar.new.USER">Triggers</a></li>
+                        <li><a href translate="header.navbar.new.USER">WorkflowRules</a></li>
+                        <li><a href translate="header.navbar.new.USER">Landing Pages</a></li>
+                        <li><a href translate="header.navbar.new.USER">Email Templates</a></li>
+                        <li><a href translate="header.navbar.new.USER">Social</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown hide">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Support</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Cases</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Cases</span></a>
+                </li>
+                <!--<li class="">-->
+                <!--<a href="#"><span translate="header.navbar.new.NEW">Projects</span></a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                <!--<a href="#"><span translate="header.navbar.new.NEW">Documents</span></a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                <!--<a href="#"><span translate="header.navbar.new.NEW">Activities</span></a>-->
+                <!--</li>-->
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Reports</span></a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW"><i class="fa  fa-ellipsis-h"></i></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Projects</a></li>
+                        <li><a href translate="header.navbar.new.USER">Documents</a></li>
+                        <li><a href translate="header.navbar.new.USER">Activities</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown hide">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Settings</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Setup</a></li>
+                        <li><a href translate="header.navbar.new.USER">Users & Roles</a></li>
+                        <li><a href translate="header.navbar.new.USER">Permissions</a></li>
+                        <li><a href translate="header.navbar.new.USER">Customization</a></li>
+                        <li><a href translate="header.navbar.new.USER">Automation</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown hide">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Help</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Help Desk</a></li>
+                        <li><a href translate="header.navbar.new.USER">Tutorials</a></li>
+                        <li><a href translate="header.navbar.new.USER">Feedback</a></li>
+                    </ul>
+                </li>
+                <!--<li class="dropdown">-->
+                <!--<a href="#" data-toggle="dropdown" class="dropdown-toggle">-->
+                <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                <!--<span translate="header.navbar.new.NEW">New</span> <span class="caret"></span>-->
+                <!--</a>-->
+                <!--<ul class="dropdown-menu" role="menu">-->
+                <!--<li><a href="#" translate="header.navbar.new.PROJECT">Projects</a></li>-->
+                <!--<li>-->
+                <!--<a href>-->
+                <!--<span class="badge bg-info pull-right">5</span>-->
+                <!--<span translate="header.navbar.new.TASK">Task</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li><a href translate="header.navbar.new.USER">User</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li>-->
+                <!--<a href>-->
+                <!--<span class="badge bg-danger pull-right">4</span>-->
+                <!--<span translate="header.navbar.new.EMAIL">Email</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</li>-->
+            </ul>
+            <!-- / link and dropdown -->
+
+            <!-- nabar right -->
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li class="hidden-xs">-->
+                <!--<a class="js-toggle-requestfullscreen">-->
+                <!--<i class="fa fa-expand fa-fw "></i>-->
+                <!--</a>-->
+                <!--<a class="js-toggle-exitfullscreen" style="display:none;">-->
+                <!--<i class="fa fa-compress fa-fw "></i>-->
+                <!--</a>-->
+                <!--</li>-->
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <i class="icon-bell fa-fw"></i>
+                        <span class="visible-xs-inline">Notifications</span>
+                        <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+                    </a>
+                    <!-- dropdown -->
+                    <div class="dropdown-menu w-xl"><!-- animated fadeIn -->
+                        <div class="panel bg-white">
+                            <div class="panel-heading b-light bg-light">
+                                <strong>You have <span>2</span> notifications</strong>
+                            </div>
+                            <div class="list-group">
+                                <a href class="list-group-item">
+                    <span class="pull-left m-r thumb-sm">
+                      <img src="img/a0.jpg" alt="..." class="img-circle">
+                    </span>
+                                    <span class="clear block m-b-none">
+                      Use awesome animate.css<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                                </a>
+                                <a href class="list-group-item">
+                    <span class="clear block m-b-none">
+                      1.0 initial released<br>
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                                </a>
+                            </div>
+                            <div class="panel-footer text-sm">
+                                <a href class="pull-right"><i class="fa fa-cog"></i></a>
+                                <a href="#notes" data-toggle="class:show animated fadeInRight">See all the
+                                    notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / dropdown -->
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-left m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="img/a0.jpg" alt="...">
+                <i class="on md b-white bottom"></i>
+              </span>
+                        <span class="visible-xs">John.Smith</span> <b class=" visible-xs caret"></b>
+                    </a>
+                    <!-- dropdown -->
+                    <ul class="dropdown-menu  w"><!--animated fadeIn-->
+                        <li class="wrapper b-b m-b-sm bg-light m-t-n-xs">
+                            <div>
+                                <p>300mb of 500mb used</p>
+                            </div>
+                            <div class="progress progress-xs m-b-none dker">
+                                <div class="progress-bar progress-bar-info" data-toggle="tooltip"
+                                     data-original-title="50%" style="width: 50%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href>
+                                <span class="badge bg-danger pull-right">30%</span>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="app.page.profile">Profile</a>
+                        </li>
+                        <li>
+                            <a ui-sref="app.docs">
+                                <span class="label bg-info pull-right">new</span>
+                                Help
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a ui-sref="access.signin">Logout</a>
+                        </li>
+                    </ul>
+                    <!-- / dropdown -->
+                </li>
+            </ul>
+            <!-- / navbar right -->
+
+            <!-- search form -->
+            <form class="navbar-form navbar-form-sm navbar-right shift navbar-search" ui-shift="prependTo"
+                  data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" ng-model="selected"
+                               typeahead="state for state in states | filter:$viewValue | limitTo:8"
+                               class="form-control input-sm bg-light no-border rounded padder"
+                               placeholder="Search projects...">
+                        <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
+                    </div>
+                </div>
+            </form>
+            <!-- / search form -->
+
+        </div>
+        <!-- / navbar collapse -->
+    </header>
+    <!-- / header -->
+
+    <!-- content -->
+    <div id="content" class="app-content m-n " role="main">
+        <div class="app-content-body app-content-full ">
+
+            <div class="vbox">
+                <div class="bg-light lter b-b wrapper-md lead-list-header-box ">
+                    <div class="lead-list-actions-box clearfix animated slideInDown">
+                        <h1 class="m-n font-thin h3 pull-left dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                <i class="fa fa-fw fa-plus visible-xs-inline-block"></i>
+                                <span translate="header.navbar.new.NEW">Leads</span> <span
+                                    class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#" translate="header.navbar.new.PROJECT">All Contacts</a></li>
+                                <li><a href="#" translate="header.navbar.new.PROJECT">My Contacts</a></li>
+                                <li><a href="#" translate="header.navbar.new.PROJECT">New This Week</a></li>
+                                <li>
+                                    <a href>
+                                        <span translate="header.navbar.new.TASK">Recently Created Contacts</span>
+                                        <span class="badge bg-info m-l">5</span>
+                                    </a>
+                                </li>
+                                <li><a href translate="header.navbar.new.USER">Recently Updated Contacts</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href translate="header.navbar.new.USER">Clone This View</a></li>
+                                <li><a href translate="header.navbar.new.USER">Make This Default View</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#" class=""><span
+                                        class="text-info-dker">+ Create View</span></a>
+                                </li>
+                            </ul>
+                            <span class="badge bg-light m-l ">232</span>
+                        </h1>
+
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <label class="btn btn-default" btn-checkbox=""><span
+                                        class="">+</span></label>
+                                <label class="btn btn-default" btn-checkbox="">Import</label>
+                            </div>
+
+                            <div class="btn-group m-l dropdown">
+                                <a class="btn btn-default" data-toggle="dropdown" class="dropdown-toggle"
+                                   btn-checkbox="">
+                                    <i class="fa  fa-ellipsis-h"></i></a>
+
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#" translate="header.navbar.new.PROJECT">All Contacts</a>
+                                    </li>
+                                    <li><a href="#" translate="header.navbar.new.PROJECT">My Contacts</a>
+                                    </li>
+                                    <li><a href="#" translate="header.navbar.new.PROJECT">New This Week</a>
+                                    </li>
+                                    <li><a href="" translate="header.navbar.new.USER">Recently Updated
+                                        Contacts</a>
+                                    </li>
+                                    <!--<li class="divider"></li>-->
+                                    <!--<li><a href="#" class=""><span class="text-info-dker">+ Create View</span></a></li>-->
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="lead-selected-actions-box clearfix animated slideInUp"
+                         style="display:none;">
+                        <div class="pull-left">
+                            <span class="text-md">1 Lead selected.</span>
+                            <span class="m-l-xs"><a href><span
+                                    class="text-info-dker text-sm">Clear</span></a></span>
+                            <span class="m-l-lg">
+                            <button class="btn btn-default"><span class="text">Send Email</span></button>
+                            <button class="btn btn-default m-l-xs"><span class="text">Create Task</span></button>
+                            <div class="btn-group m-l dropdown">
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#" translate="header.navbar.new.PROJECT">More Actions</a></li>
+                                    <li><a href="#" translate="header.navbar.new.PROJECT">Delete</a></li>
+                                    <li><a href="#" translate="header.navbar.new.PROJECT">Change Owner</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="" translate="header.navbar.new.USER">Add To List</a></li>
+                                    <li><a href="" translate="header.navbar.new.USER">Remove From List</a></li>
+                                    <!--<li><a href="#" class=""><span class="text-info-dker">+ Create View</span></a></li>-->
+                                </ul>
+
+                                <a class="btn btn-default" data-toggle="dropdown" btn-checkbox="">
+                                    <i class="fa  fa-ellipsis-h"></i></a>
+                            </div>
+                        </span>
+
+                        </div>
+                        <div class="pull-right">
+                            <small class="text-muted inline m-t-sm m-b-sm m-r-lg">Showing 20-30 of 50 items
+                            </small>
+                            <ul class="pagination pagination-sm m-t-none m-b-none inline v-middle">
+                                <li class="paginate_button previous disabled"
+                                    aria-controls="DataTables_Table_1" tabindex="0">
+                                    <a href="#"><i class="fa fa-angle-left text-lg fa-fw"></i></a></li>
+                                <li class="paginate_button next" aria-controls="DataTables_Table_1"
+                                    tabindex="0">
+                                    <a href="#"><i class="fa fa-angle-right  text-lg fa-fw"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-row lead-list-container-box">
+                    <div class="cell w-full">
+                        <div class="cell-inner">
+                            <div class="hbox hbox-auto-xs bg-white">
+                                <div class="col w-md b-r filter-box">
+                                    <div class="vbox">
+                                        <div class="wrapper b-b">
+                                            <p class="m-b-xs" style="font-weight: 600;">View</p>
+                                            <div class="btn-group">
+                                                <div class="m-n dropdown ">
+                                                    <a href="#" data-toggle="dropdown"
+                                                       class="dropdown-toggle btn btn-default "
+                                                       aria-expanded="true">
+                                                        <span>All Contacts</span>
+                                                        <span class="caret" style="margin-left: 40px;"></span>
+                                                    </a>
+
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#" translate="header.navbar.new.PROJECT">All
+                                                            Contacts</a></li>
+                                                        <li><a href="#" translate="header.navbar.new.PROJECT">My
+                                                            Contacts</a></li>
+                                                        <li><a href="#" translate="header.navbar.new.PROJECT">New This
+                                                            Week</a></li>
+                                                        <li>
+                                                            <a href="">
+                                                                <span translate="header.navbar.new.TASK">Recently Created Contacts</span>
+                                                                <span class="badge bg-info m-l">5</span>
+                                                            </a>
+                                                        </li>
+                                                        <li><a href="" translate="header.navbar.new.USER">Recently
+                                                            Updated
+                                                            Contacts</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="" translate="header.navbar.new.USER">Clone This
+                                                            View</a></li>
+                                                        <li><a href="" translate="header.navbar.new.USER">Make This
+                                                            Default
+                                                            View</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#" class=""><span
+                                                                class="text-info-dker">+ Create View</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!--<button class="btn btn-default font-bold">+</button>-->
+                                            </div>
+                                            <!--<span class="pull-right"><a href class="text-base"><span-->
+                                            <!--class="text-info-dker">Clear</span></a></span>-->
+                                        </div>
+                                        <div class="row-row">
+                                            <div class="cell">
+                                                <div class="cell-inner">
+                                                    <div class="wrapper">
+                                                        <a href="#" class="hide"><span class="text-info-dker">+ Add Filter</span></a>
+
+                                                        <div class="">
+                                                            <ul class="filter-items">
+                                                                <li>
+                                                                    <span><i
+                                                                            class="fa fa-minus-square-o text-md m-r"></i></span>
+                                                                    <span>First Name</span>
+                                                                    <div>
+                                                                        <select class="m-t-xs">
+                                                                            <option value="0">is</option>
+                                                                            <option value="1">isn't</option>
+                                                                            <option value="2">contains</option>
+                                                                            <option value="3">doesn't contain</option>
+                                                                            <option value="10">starts with</option>
+                                                                            <option value="11">ends with</option>
+                                                                            <option value="13">is empty</option>
+                                                                            <option value="13">is not empty</option>
+                                                                        </select>
+                                                                        <div class="m-b">
+                                                                            <input type="text" class="form-control"
+                                                                                   placeholder="Type here"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <span><i
+                                                                            class="fa fa-plus-square-o text-md m-r"></i></span>
+                                                                    <span>Activities</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox" checked
+                                                                            name=""><i></i></label></span>
+                                                                    <span>Created By</span>
+                                                                    <div>
+                                                                        <select class="m-t-xs">
+                                                                            <option value="0">is</option>
+                                                                            <option value="1">isn't</option>
+                                                                            <option value="2">contains</option>
+                                                                            <option value="3">doesn't contain</option>
+                                                                            <option value="10">starts with</option>
+                                                                            <option value="11">ends with</option>
+                                                                            <option value="13">is empty</option>
+                                                                            <option value="13">is not empty</option>
+                                                                        </select>
+                                                                        <div class="m-b">
+                                                                            <input type="text" class="form-control"
+                                                                                   placeholder="Type here"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created Date</span>
+
+                                                                    <div>
+                                                                        <div class="m-t-xs"><select name="datecondition"
+                                                                                                    onchange="crmListView.checkCVFilterCondition(this);"
+                                                                                                    data-zcqa="DT_customViewFilter_options">
+                                                                            <option value="Age in Days">in the last
+                                                                            </option>
+                                                                            <option value="Due in Days">due in</option>
+                                                                            <option value="0">On</option>
+                                                                            <option value="7">before</option>
+                                                                            <option value="5">after</option>
+                                                                            <option value="${TODAY}">Today</option>
+                                                                            <option value="${YESTERDAY}">Yesterday
+                                                                            </option>
+                                                                            <option value="${THISWEEK}">This Week
+                                                                            </option>
+                                                                            <option value="${THISMONTH}">This Month
+                                                                            </option>
+                                                                            <option value="${THISYEAR}">This year
+                                                                            </option>
+                                                                            <option value="${LASTWEEK}">Last Week
+                                                                            </option>
+                                                                            <option value="${LASTMONTH}">Last Month
+                                                                            </option>
+                                                                            <option value="${EMPTY}">is empty</option>
+                                                                            <option value="${NOTEMPTY}">is not empty
+                                                                            </option>
+                                                                        </select>
+                                                                        </div>
+
+                                                                        <input name="searchdate" type="text"
+                                                                               placeholder="MM/dd/yyyy"
+                                                                               data-fieldlabel="Created Date"
+                                                                               class="datepicker"/>
+
+                                                                        <div>
+                                                                            <input name="ageindays" type="text"
+                                                                                   value="2" data-defvalue="2"
+                                                                                   data-zcqa="DT_ageindays"
+                                                                                   data-fieldlabel="Created Date"
+                                                                                   style="width:40px;"/>
+                                                                            <select name="days"
+                                                                                    data-zcqa="_days_optionDropDown">
+                                                                                <option value="${LASTAGE">days</option>
+                                                                                <option value="${LASTAGEINWEEKS">weeks
+                                                                                </option>
+                                                                                <option value="${LASTAGEINMONTHS">
+                                                                                    months
+                                                                                </option>
+                                                                            </select></div>
+                                                                    </div>
+                                                                </li>
+
+
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Email</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Phone</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Lead Owner</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Lead Source</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created By</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created Date</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>DOB</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Last Name</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>City</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created By</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created Date</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>DOB</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Last Name</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>City</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Lead Owner</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Lead Source</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created By</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="wrapper b-t b-light text-center">
+                                                        <p>Footer with fluid height</p>
+                                                        <a href="" class="btn btn-info">Create Marker</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vbox hide">
+                                        <div class="wrapper ">
+                                            <span>FILTER LEADS BY</span>
+                                            <span class="pull-right"><a href class="text-base"><span
+                                                    class="text-info-dker">Clear</span></a></span>
+                                        </div>
+                                        <div class="row-row">
+                                            <div class="cell">
+                                                <div class="cell-inner">
+                                                    <div class="wrapper">
+                                                        <a href="#" class="hide"><span class="text-info-dker">+ Add Filter</span></a>
+
+                                                        <div class="">
+                                                            <ul class="filter-items">
+                                                                <li>
+                                                                    <span><i
+                                                                            class="fa fa-minus-square-o text-md m-r"></i></span>
+                                                                    <span>First Name</span>
+                                                                    <div>
+                                                                        <select class="m-t-xs">
+                                                                            <option value="0">is</option>
+                                                                            <option value="1">isn't</option>
+                                                                            <option value="2">contains</option>
+                                                                            <option value="3">doesn't contain</option>
+                                                                            <option value="10">starts with</option>
+                                                                            <option value="11">ends with</option>
+                                                                            <option value="13">is empty</option>
+                                                                            <option value="13">is not empty</option>
+                                                                        </select>
+                                                                        <div class="m-b">
+                                                                            <input type="text" class="form-control"
+                                                                                   placeholder="Type here"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <span><i
+                                                                            class="fa fa-plus-square-o text-md m-r"></i></span>
+                                                                    <span>Activities</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox" checked
+                                                                            name=""><i></i></label></span>
+                                                                    <span>Created By</span>
+                                                                    <div>
+                                                                        <select class="m-t-xs">
+                                                                            <option value="0">is</option>
+                                                                            <option value="1">isn't</option>
+                                                                            <option value="2">contains</option>
+                                                                            <option value="3">doesn't contain</option>
+                                                                            <option value="10">starts with</option>
+                                                                            <option value="11">ends with</option>
+                                                                            <option value="13">is empty</option>
+                                                                            <option value="13">is not empty</option>
+                                                                        </select>
+                                                                        <div class="m-b">
+                                                                            <input type="text" class="form-control"
+                                                                                   placeholder="Type here"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created Date</span>
+
+                                                                    <div>
+                                                                        <div class="m-t-xs"><select name="datecondition"
+                                                                                                    onchange="crmListView.checkCVFilterCondition(this);"
+                                                                                                    data-zcqa="DT_customViewFilter_options">
+                                                                            <option value="Age in Days">in the last
+                                                                            </option>
+                                                                            <option value="Due in Days">due in</option>
+                                                                            <option value="0">On</option>
+                                                                            <option value="7">before</option>
+                                                                            <option value="5">after</option>
+                                                                            <option value="${TODAY}">Today</option>
+                                                                            <option value="${YESTERDAY}">Yesterday
+                                                                            </option>
+                                                                            <option value="${THISWEEK}">This Week
+                                                                            </option>
+                                                                            <option value="${THISMONTH}">This Month
+                                                                            </option>
+                                                                            <option value="${THISYEAR}">This year
+                                                                            </option>
+                                                                            <option value="${LASTWEEK}">Last Week
+                                                                            </option>
+                                                                            <option value="${LASTMONTH}">Last Month
+                                                                            </option>
+                                                                            <option value="${EMPTY}">is empty</option>
+                                                                            <option value="${NOTEMPTY}">is not empty
+                                                                            </option>
+                                                                        </select>
+                                                                        </div>
+
+                                                                        <input name="searchdate" type="text"
+                                                                               placeholder="MM/dd/yyyy"
+                                                                               data-fieldlabel="Created Date"
+                                                                               class="datepicker"/>
+
+                                                                        <div>
+                                                                            <input name="ageindays" type="text"
+                                                                                   value="2" data-defvalue="2"
+                                                                                   data-zcqa="DT_ageindays"
+                                                                                   data-fieldlabel="Created Date"
+                                                                                   style="width:40px;"/>
+                                                                            <select name="days"
+                                                                                    data-zcqa="_days_optionDropDown">
+                                                                                <option value="${LASTAGE">days</option>
+                                                                                <option value="${LASTAGEINWEEKS">weeks
+                                                                                </option>
+                                                                                <option value="${LASTAGEINMONTHS">
+                                                                                    months
+                                                                                </option>
+                                                                            </select></div>
+                                                                    </div>
+                                                                </li>
+
+
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Email</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Phone</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Lead Owner</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Lead Source</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created By</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created Date</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>DOB</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Last Name</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>City</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created By</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created Date</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>DOB</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Last Name</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>City</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Lead Owner</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Lead Source</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span><label
+                                                                            class="i-checks i-checks-sm m-b-none m-r-xs"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></span>
+                                                                    <span>Created By</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="wrapper b-t b-light text-center">
+                                                        <p>Footer with fluid height</p>
+                                                        <a href="" class="btn btn-info">Create Marker</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col ">
+
+                                    <div class="vbox">
+                                        <div class="row-row">
+                                            <div class="cell">
+                                                <div class="cell-inner">
+                                                    <div class="">
+                                                      <span class="pull-right"
+                                                            style="position: fixed; top: 300px; z-index: 90; width:10px; height: 40px; background: #bbb;">
+                                                        <a href class="js-collapse-filter-box">
+                                                            <i class="fa fa-chevron-left text-white text-xs m-t"
+                                                               style="font-size: 9px; margin-left: 1px;"></i>
+                                                        </a>
+                                                        <a href class="js-expand-filter-box " style="display: none;">
+                                                            <i class="fa fa-chevron-right text-white text-xs m-t"
+                                                               style="font-size: 9px; margin-left: 2px;"></i>
+                                                        </a>
+                                                        </span>
+                                                        <div class="table-responsive bg-white ">
+                                                            <table class="table table-hover lead-listing-table">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>
+                                                                        <label class=" m-b-none pull-left">
+                                                                            <a href="#"
+                                                                               class="js-lead-list-fields-select"><i
+                                                                                    class="fa fa-table fa-fw text-lg m-r-sm text-muted"></i></a>
+                                                                        </label>
+                                                                        <label class=" i-checks i-checks-sm m-b-none  pull-right">
+                                                                            <input type="checkbox"><i></i>
+                                                                        </label>
+                                                                    </th>
+                                                                    <th class="">
+                                                                        <div class="dropdown">
+                                                                            <a href="#" data-toggle="dropdown"
+                                                                               class="dropdown-toggle"
+                                                                               aria-expanded="false">Name
+                                                                                <i class="fa fa-chevron-down "
+                                                                                   style="font-size: 8px;"></i>
+                                                                            </a>
+                                                                            <ul class="dropdown-menu " role="menu"
+                                                                                style="min-width: 100px;">
+                                                                                <li><a href="" class="text-xs">Asc <i
+                                                                                        class="fa fa-chevron-up m-l"
+                                                                                        style="font-size: 8px;"></i></a>
+                                                                                </li>
+                                                                                <li><a href="" class="text-xs">Desc <i
+                                                                                        class="fa fa-chevron-down m-l"
+                                                                                        style="font-size: 8px;"></i></a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </th>
+                                                                    <th>
+                                                                        <div class="dropdown">
+                                                                            <a href="#" data-toggle="dropdown"
+                                                                               class="dropdown-toggle"
+                                                                               aria-expanded="false">Task
+                                                                                <i class="fa fa-chevron-up hide "
+                                                                                   style="font-size: 8px;"></i>
+                                                                                <i class="fa fa-chevron-down hide "
+                                                                                   style="font-size: 8px;"></i>
+                                                                            </a>
+                                                                            <ul class="dropdown-menu " role="menu"
+                                                                                style="min-width: 100px;">
+                                                                                <li><a href="" class="text-xs">Asc <i
+                                                                                        class="fa fa-chevron-up m-l"
+                                                                                        style="font-size: 8px;"></i></a>
+                                                                                </li>
+                                                                                <li><a href="" class="text-xs">Desc <i
+                                                                                        class="fa fa-chevron-down m-l"
+                                                                                        style="font-size: 8px;"></i></a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </th>
+                                                                    <th>Date</th>
+                                                                    <th>Project</th>
+                                                                    <th>Task</th>
+                                                                    <th>Date</th>
+                                                                    <th>Project</th>
+                                                                    <th>Task</th>
+                                                                    <th>Date</th>
+                                                                    <th>Project</th>
+                                                                    <th>Task</th>
+                                                                    <th>Date</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="btn-group dropdown pull-left lead-item-action">
+                                                                            <a class="" data-toggle="dropdown"
+                                                                               btn-checkbox=""
+                                                                               aria-expanded="true">
+                                                                                <i class="fa fa-cog text-muted m-l-xs"></i></a>
+
+                                                                            <ul class="dropdown-menu " role="menu">
+                                                                                <li><a href="#"
+                                                                                       translate="header.navbar.new.PROJECT">Edit</a>
+                                                                                </li>
+                                                                                <li><a href="#"
+                                                                                       translate="header.navbar.new.PROJECT">Delete</a>
+                                                                                </li>
+                                                                                <li><a href="#"
+                                                                                       translate="header.navbar.new.PROJECT">Add
+                                                                                    To
+                                                                                    List</a></li>
+                                                                                <li class="divider"></li>
+                                                                                <li><a href=""
+                                                                                       translate="header.navbar.new.USER">Send
+                                                                                    Email</a></li>
+                                                                                <li><a href=""
+                                                                                       translate="header.navbar.new.USER">Create
+                                                                                    Task</a></li>
+                                                                                <li><a href=""
+                                                                                       translate="header.navbar.new.USER">Change
+                                                                                    Owner</a></li>
+                                                                                <!--<li><a href="#" class=""><span class="text-info-dker">+ Create View</span></a></li>-->
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <label class=" i-checks i-checks-sm m-b-none  pull-right">
+                                                                            <input type="checkbox" name="post"
+                                                                                   class="select-lead"><i></i></label>
+                                                                    </td>
+                                                                    <td><a href="read_lead_details.html" class=""><span
+                                                                            class="text-info">Formasa</span></a>
+                                                                    </td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 11, 2013</td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 11, 2013</td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 11, 2013</td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Idrawfast</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 7, 2013</td>
+                                                                    <td>Idrawfast</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 7, 2013</td>
+                                                                    <td>Idrawfast</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 7, 2013</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Videodown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 1, 2013</td>
+                                                                    <td>Videodown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 1, 2013</td>
+                                                                    <td>Videodown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 1, 2013</td>
+                                                                    <td>Jul 1, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td><a href="#" class=""><span class="text-info">Formasa</span></a>
+                                                                    </td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 11, 2013</td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 11, 2013</td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 11, 2013</td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Idrawfast</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 7, 2013</td>
+                                                                    <td>Idrawfast</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 7, 2013</td>
+                                                                    <td>Idrawfast</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 7, 2013</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Videodown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 1, 2013</td>
+                                                                    <td>Videodown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 1, 2013</td>
+                                                                    <td>Videodown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 1, 2013</td>
+                                                                    <td>Jul 1, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td><a href="#" class=""><span class="text-info">Formasa</span></a>
+                                                                    </td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Jul 22, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Jul 15, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 11, 2013</td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 11, 2013</td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 11, 2013</td>
+                                                                    <td>Throwdown</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Idrawfast</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 7, 2013</td>
+                                                                    <td>Idrawfast</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 7, 2013</td>
+                                                                    <td>Idrawfast</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 7, 2013</td>
+                                                                    <td>4c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Formasa</td>
+                                                                    <td>8c</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Jul 3, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label
+                                                                            class=" i-checks i-checks-sm m-b-none  pull-right"><input
+                                                                            type="checkbox"
+                                                                            name="post[]"><i></i></label></td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Avatar system</td>
+                                                                    <td>15c</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>Jul 2, 2013</td>
+                                                                    <td>
+                                                                        <a href class="active" ui-toggle-class><i
+                                                                                class="fa fa-check text-success text-active"></i><i
+                                                                                class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <footer class="panel-footer">
+                                                            <div class="row">
+                                                                <div class="col-sm-3 text-center">
+                                                                    <small class="text-muted inline m-t-sm m-b-sm">
+                                                                        Showing 20-30 of 50
+                                                                        items
+                                                                    </small>
+                                                                </div>
+                                                                <div class="col-sm-4 hidden-xs hide">
+
+
+                                                                    <button class="btn btn-sm btn-default hide">Apply
+                                                                    </button>
+                                                                </div>
+
+                                                                <div class="col-sm-9 text-right text-center-xs ">
+                                                                    <select class="input-sm form-control w-sm inline v-middle m-r-lg">
+                                                                        <option value="10"> 10 Records Per Page</option>
+                                                                        <option value="20" selected=""> 20 Records Per
+                                                                            Page
+                                                                        </option>
+                                                                        <option value="30"> 30 Records Per Page</option>
+                                                                        <option value="40"> 40 Records Per Page</option>
+                                                                        <option value="50"> 50 Records Per Page</option>
+                                                                    </select>
+
+                                                                    <ul class="pagination pagination-sm m-t-none m-b-none inline v-middle">
+                                                                        <li class="paginate_button previous disabled"
+                                                                            aria-controls="DataTables_Table_1"
+                                                                            tabindex="0"
+                                                                            id="DataTables_Table_1_previous">
+                                                                            <a href="#"><i
+                                                                                    class="fa fa-angle-left text-lg fa-fw"></i></a>
+                                                                        </li>
+                                                                        <!--<li class="paginate_button active" aria-controls="DataTables_Table_1"-->
+                                                                        <!--tabindex="0"><a href="#">1</a></li>-->
+                                                                        <!--<li class="paginate_button no-border" aria-controls="DataTables_Table_1"-->
+                                                                        <!--tabindex="0"><a href="" class="no-border"><span class="text-base">10 to 20</span></a></li>-->
+                                                                        <!--<li class="paginate_button " aria-controls="DataTables_Table_1"-->
+                                                                        <!--tabindex="0"><a href="#">3</a></li>-->
+                                                                        <!--<li class="paginate_button " aria-controls="DataTables_Table_1"-->
+                                                                        <!--tabindex="0"><a href="#">4</a></li>-->
+                                                                        <!--<li class="paginate_button " aria-controls="DataTables_Table_1"-->
+                                                                        <!--tabindex="0"><a href="#">5</a></li>-->
+                                                                        <!--<li class="paginate_button " aria-controls="DataTables_Table_1"-->
+                                                                        <!--tabindex="0"><a href="#">6</a></li>-->
+                                                                        <li class="paginate_button next"
+                                                                            aria-controls="DataTables_Table_1"
+                                                                            tabindex="0" id="DataTables_Table_1_next">
+                                                                            <a href="#"><i
+                                                                                    class="fa fa-angle-right  text-lg fa-fw"></i></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </footer>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- /content -->
+
+    <!-- footer -->
+    <div class="footer navbar navbar-fixed-bottom bg-light lt b-t m-n">
+        <ul class="nav nav-tabs nav-md pull-left ng-scope">
+            <li><a href=""><i class="icon-star m-r-xs"></i> Getting Started</a></li>
+            <li><a href=""><i class="icon-question m-r-xs"></i> Help Center</a></li>
+            <li><a href=""><i class="icon-earphones-alt m-r-xs"></i> Contact Us</a></li>
+
+        </ul>
+        <ul class="nav nav-tabs nav-md pull-right ng-scope no-border m-n">
+            <li class="dropdown dropup b-l" dropdown="">
+                <a href="" class="dropdown-toggle m-n" data-toggle="dropdown" aria-expanded="false">
+                    <i class=" icon-clock" style="font-size: 16px;"></i></a>
+                <div class="dropdown-menu w-xl pull-right"><!-- animated fadeIn -->
+                    <div class="panel bg-white">
+                        <div class="panel-heading b-light bg-light ">
+                            <strong>Recent Items</strong>
+                        </div>
+                        <div class="list-group">
+                            <a href="" class="list-group-item">
+                                <span class="pull-left m-r thumb-sm">
+                                  <img src="img/a0.jpg" alt="..." class="img-circle">
+                                </span>
+                                <span class="clear block m-b-none">
+                                  Use awesome animate.css<br>
+                                  <small class="text-muted">10 minutes ago</small>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                    <i class="fa fa-phone-square fa-fw m-r text-md"></i> latest lead<br>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                  <i class="fa fa-paper-plane-o fa-fw m-r text-md"></i> product asdf<br>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                  1.0 initial released<br>
+                                    <small class="text-muted">1 hour ago</small>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                  1.0 initial released<br>
+                                    <small class="text-muted">1 hour ago</small>
+                                </span>
+                            </a>
+                        </div>
+                        <!--<div class="panel-footer text-sm">-->
+                        <!--<a href="" class="pull-right"><i class="fa fa-cog"></i></a>-->
+                        <!--<a href="#notes" data-toggle="class:show animated fadeInRight">See all the-->
+                        <!--notifications</a>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </li>
+            <li class="hidden-xs b-l">
+                <a class="js-toggle-requestfullscreen">
+                    <i class="fa fa-expand fa-fw "></i>
+                </a>
+                <a class="js-toggle-exitfullscreen" style="display:none;">
+                    <i class="fa fa-compress fa-fw "></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- / footer -->
+
+
+</div>
+
+
+<div class="modal fade" id="lead-field-select-modal" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Select Lead fields to view</h4>
+            </div>
+
+            <div class="b-b b-light" style="padding: 15px;">
+                <input type="text" class="form-control" style="" placeholder="search field name">
+            </div>
+
+            <div class="modal-body">
+
+                <ul ui-jq="sortable" class="list-group gutter list-group-lg list-group-sp">
+
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]" checked disabled><i></i></label>
+                            First Name <span class="text-danger">*</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]" checked disabled><i></i></label>
+                            Last Name <span class="text-danger">*</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]" checked><i></i></label>
+                            Lead Status
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]" checked><i></i></label>
+                            Lead Score
+                        </div>
+                    </li>
+
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Mobile
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Email
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Created By
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Created Date
+                        </div>
+                    </li>
+
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            DOB
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            City
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Lead Owner
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Last Contacted
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script src="../libs/jquery/jquery/dist/jquery.js"></script>
+<script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/ui-load.js"></script>
+<script src="js/ui-jp.config.js"></script>
+<script src="js/ui-jp.js"></script>
+<script src="js/ui-nav.js"></script>
+<script src="js/ui-toggle.js"></script>
+<script src="js/ui-client.js"></script>
+<script src="js/jquery.fullscreen.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+<script>
+    $(".js-collapse-filter-box").click(function (e) {
+        e.preventDefault();
+
+        $(".filter-box").hide();
+
+        $(".js-collapse-filter-box").hide();
+        $(".js-expand-filter-box").show();
+
+    });
+
+    $(".js-expand-filter-box").click(function (e) {
+        e.preventDefault();
+
+        $(".filter-box").show();
+
+        $(".js-collapse-filter-box").show();
+        $(".js-expand-filter-box").hide();
+    });
+
+    $(".select-lead").click(function (e) {
+        if ($(this).is(':checked')) {
+            // selected
+            $(".lead-selected-actions-box").show();
+            $(".lead-list-actions-box").hide();
+        }
+        else {
+            // unselected
+            $(".lead-list-actions-box").show();
+            $(".lead-selected-actions-box").hide();
+        }
+
+    });
+
+    $(".js-lead-list-fields-select").click(function (e) {
+        e.preventDefault();
+
+        $("#lead-field-select-modal").modal();
+
+    });
+
+    $(function () {
+        // check native support
+//        $('#support').text($.fullscreen.isNativelySupported() ? 'supports' : 'doesn\'t support');
+        // open in fullscreen
+        $('a.js-toggle-requestfullscreen').click(function () {
+            $('body').fullscreen();
+            return false;
+        });
+        // exit fullscreen
+        $('a.js-toggle-exitfullscreen').click(function () {
+            $.fullscreen.exit();
+            return false;
+        });
+        // document's event
+        $(document).bind('fscreenchange', function (e, state, elem) {
+            // if we currently in fullscreen mode
+            if ($.fullscreen.isFullScreen()) {
+                $('a.js-toggle-requestfullscreen').hide();
+                $('a.js-toggle-exitfullscreen').show();
+            } else {
+                $('a.js-toggle-requestfullscreen').show();
+                $('a.js-toggle-exitfullscreen').hide();
+            }
+            $('#state').text($.fullscreen.isFullScreen() ? '' : 'not');
+        });
+    });
+
+    $(document).ready(function () {
+
+        $('.datepicker').datetimepicker({
+            format: 'L'
+        });
+        $('.timepicker').datetimepicker({
+            format: 'LT'
+        });
+
+    });
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--add beans for all services and daos herer-->
+
+    <bean id="userDao" class="org.ht.tweet.dao.UserDaoImpl"/>
+    <bean id="userService" class="org.ht.tweet.service.UserServiceImpl"/>
+
+    <bean id="accountDao" class="org.ht.tweet.dao.AccountDaoImpl"/>
+    <bean id="accountService" class="org.ht.tweet.service.AccountServiceImpl"/>
+
+    <bean id="tweetDao" class="org.ht.tweet.dao.TweetDaoImpl"/>
+    <bean id="tweetService" class="org.ht.tweet.service.TweetServiceImpl"/>
+
+    <bean id="userProfileDao" class="org.ht.tweet.dao.UserProfileDaoImpl"/>
+    <bean id="userProfileService" class="org.ht.tweet.service.UserProfileServiceImpl"/>
+
+    <bean id="twitterService" class="org.ht.tweet.service.TweetServiceImpl"/>
+    <!--<bean id="dBFillingService" class="org.ht.tweet.service.DBFillingServiceImpl"/>-->
+
+
+    <bean id="searchDao" class="org.ht.tweet.dao.SearchDaoImpl"/>
+    <bean id="searchService" class="org.ht.tweet.service.SearchServiceImpl"/>
+
+    <bean id="messageDao" class="org.ht.tweet.dao.MessageDaoImpl"/>
+    <bean id="messageService" class="org.ht.tweet.service.MessageServiceImpl"/>
+
+</beans>

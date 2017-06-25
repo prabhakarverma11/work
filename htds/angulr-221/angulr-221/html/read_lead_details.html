@@ -1,0 +1,2513 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="utf-8"/>
+    <title>Html version | Angulr</title>
+    <meta name="description"
+          content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="../libs/assets/animate.css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/assets/simple-line-icons/css/simple-line-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+
+    <link rel="stylesheet" href="css/font.css" type="text/css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sevillana" rel="stylesheet">
+
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"/>
+
+
+    <style>
+
+        .logo-text {
+            font-family: 'Metamorphous', cursive;
+            font-family: 'Sevillana', cursive;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .mW100 {
+            min-width: 100px;
+        }
+
+        .lead-listing-table tr th, .lead-listing-table tr td {
+            white-space: nowrap;
+        }
+
+        .lead-listing-table tr th:first-of-type, .lead-listing-table tr td:first-of-type {
+            position: absolute;
+            background: #fff;
+            min-width: 90px;
+            border-right: 1px solid #f7f7f7;
+        }
+
+        .lead-listing-table tr th:first-of-type {
+            height: 34px;
+            z-index: 98;
+        }
+
+        /*.lead-listing-table thead {*/
+        /*position: fixed;*/
+        /*background: #fff;*/
+        /*z-index: 999;*/
+        /*}*/
+
+        /*.lead-listing-table tr:first-of-type td {*/
+        /*padding-top: 40px;*/
+        /*}*/
+
+        .lead-listing-table tr th:nth-of-type(2), .lead-listing-table tr td:nth-of-type(2) {
+            min-width: 300px;
+            padding-left: 120px;
+        }
+
+        .lead-listing-table tr th, .lead-listing-table tr td {
+            min-width: 100px;
+        }
+
+        .lead-listing-table tr th {
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .lead-listing-table tr td {
+            color: #000;
+            font-size: 13px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        /*.i-checks > i {*/
+        /*width: 16px;*/
+        /*height: 16px;*/
+        /*}*/
+
+        .footer .nav.nav-md > li > a {
+            padding: 7px 15px;
+        }
+
+        .footer.navbar {
+            min-height: 35px;
+        }
+
+        .app-content-body {
+            padding-bottom: 35px;
+        }
+
+        .filter-box table tr td {
+            padding: 5px 0px;
+        }
+
+        table.lead-listing-table tbody tr .lead-item-action {
+            display: none;
+        }
+
+        table.lead-listing-table tbody tr:hover .lead-item-action {
+            display: inline-block;
+        }
+
+        .lead-list-header-box {
+            height: 75px;
+        }
+
+        .animated {
+            -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .app-content-full {
+            bottom: 35px;
+            width: 100% !important;
+        }
+
+        .no-scroll {
+            overflow: hidden;
+        }
+
+        #lead-field-select-modal .modal-body {
+            max-height: 400px;
+            overflow: auto;
+        }
+
+        #lead-field-select-modal .list-group-sp .list-group-item {
+            border: none;
+            padding: 5px;
+            border-bottom: 1px solid #f7f7f7;
+            margin: 0;
+        }
+
+        #lead-field-select-modal .list-group-sp .list-group-item span.drag-holder {
+            display: none;
+        }
+
+        #lead-field-select-modal .list-group-sp .list-group-item:hover span.drag-holder {
+            display: inline-block;
+        }
+
+        #lead-field-select-modal .list-group-sp .list-group-item span.drag-holder:hover {
+            cursor: move;
+        }
+
+        #lead-field-select-modal .list-group-sp .list-group-item:hover {
+            background: #eee;
+        }
+
+        .lead-list-header-box {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 75px;
+            z-index: 999;
+        }
+
+        .lead-list-container-box > .cell > .cell-inner {
+            top: 75px !important;
+        }
+
+        .navbar-search input:focus {
+            background: #fff;
+        }
+
+        .navbar-search input:focus + span button {
+            background: #fff;
+        }
+
+        .footer li a {
+            margin: 0px;
+            border: none;
+            border-radius: 0px;
+        }
+
+        .lead-detail-items .list-group-item {
+            border: none;
+            padding: 6px 15px;
+        }
+
+        .lead-detail-items .list-group-item:hover {
+            background: #fff;
+        }
+
+        .lead-detail-action-blocks {
+            border: none;
+        }
+
+        .lead-detail-action-blocks .nav-tabs-alt ul.nav.nav-tabs > li > a {
+            color: #444;
+            margin: 0px;
+        }
+
+        .lead-detail-action-blocks .nav-tabs-alt ul.nav.nav-tabs > li:hover > a {
+            color: #7266ba;
+        }
+
+        .lead-detail-action-blocks .nav-tabs-alt ul.nav.nav-tabs > li > a {
+            padding: 10px 15px 10px 5px;
+        }
+
+        .btn.btn-flat {
+            box-shadow: none;
+            border: none;
+        }
+
+        .btn.btn-underline {
+            background: transparent;
+        }
+
+        .btn.btn-underline:hover,
+        .btn.btn-underline:active,
+        .btn.btn-underline:focus,
+        .btn.btn-underline:visited {
+            background: transparent;
+        }
+
+        .btn.btn-underline:hover span,
+        .btn.btn-underline:active span,
+        .btn.btn-underline:focus span,
+        .btn.btn-underline:visited span {
+            text-decoration: underline;
+        }
+
+        .lead-detail-action-blocks .tab-pane {
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .lead-details-input-group .form-group label {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .lead-details-input-group .form-group input, .lead-details-input-group .form-group textarea {
+            border-width: 0px 0px 1px 0px;
+            border-style: dotted;
+            padding: 0;
+            font-size: 14px;
+            color: #444;
+            border-radius: 0px;
+        }
+
+        .lead-details-input-group .form-group {
+            position: relative;
+        }
+
+        .lead-details-input-group .form-group input {
+            margin-top: -5px;
+        }
+
+        .lead-details-input-group .lead-detail-field-actions {
+            padding: 0;
+            width: 50px;
+            float: right;
+            top: 0;
+            position: absolute;
+            right: 0px;
+            display: none;
+        }
+
+        .lead-details-input-group .form-group:hover .lead-detail-field-actions {
+            display: inline-block;
+        }
+
+        .lead-details-block .panel.panel-default {
+            border: none;
+        }
+
+        .lead-details-block .panel-heading {
+            text-transform: uppercase;
+        }
+
+        textarea.no-resize {
+            resize: none;
+        }
+
+
+    </style>
+
+
+</head>
+<body class="no-scroll">
+<div class="app app-header-fixed app-aside-fixed app-aside-folded">
+
+
+    <!-- header -->
+    <header id="header" class="app-header navbar" role="menu">
+        <!-- navbar header -->
+        <div class="navbar-header box-shadow bg-info dker">
+            <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </button>
+            <button class="pull-right hide" ui-toggle-class="off-screen" target=".app-aside" ui-scroll="app">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </button>
+            <!-- brand -->
+            <a href="#/" class="navbar-brand text-lt">
+                <!--<i class="fa fa-btc"></i>-->
+                <!--<img src="img/logo.png" alt="." class="hide">-->
+                <span class="logo-text ">R</span>
+                <span class="hidden-folded m-l-xs logo-text">Read</span>
+            </a>
+            <!-- / brand -->
+        </div>
+        <!-- / navbar header -->
+
+        <!-- navbar collapse -->
+        <div class="collapse pos-rlt navbar-collapse box-shadow bg-info dker">
+            <!-- buttons -->
+            <div class="nav navbar-nav hidden-xs ">
+                <a href="#" class="btn no-shadow navbar-btn hide" ui-toggle-class="app-aside-folded" target=".app">
+                    <i class="fa fa-dedent fa-fw text"></i>
+                    <i class="fa fa-indent fa-fw text-active"></i>
+                </a>
+                <a href="#" class="btn no-shadow navbar-btn">
+                    <i class="icon-home fa-fw"></i>
+                </a>
+            </div>
+            <!-- / buttons -->
+
+            <!-- link and dropdown -->
+            <ul class="nav navbar-nav hidden-xs">
+                <!--<li class="dropdown pos-stc">-->
+                <!--<a href="#" data-toggle="dropdown" class="dropdown-toggle">-->
+                <!--<span>Mega</span>-->
+                <!--<span class="caret"></span>-->
+                <!--</a>-->
+                <!--<div class="dropdown-menu wrapper w-full bg-white">-->
+                <!--<div class="row">-->
+                <!--<div class="col-sm-4">-->
+                <!--<div class="m-l-xs m-t-xs m-b-xs font-bold">Pages <span-->
+                <!--class="badge badge-sm bg-success">10</span></div>-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Profile</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i-->
+                <!--class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Post</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Search</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Invoice</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i-->
+                <!--class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Price</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Lock-->
+                <!--screen</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign in</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign up</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 b-l b-light">-->
+                <!--<div class="m-l-xs m-t-xs m-b-xs font-bold">UI Kits <span-->
+                <!--class="label label-sm bg-primary">12</span></div>-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Buttons</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Icons-->
+                <!--<span class="badge badge-sm bg-warning">1000+</span></a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i-->
+                <!--class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Grid</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Widgets</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="col-xs-6">-->
+                <!--<ul class="list-unstyled l-h-2x">-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Bootstap</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sortable</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Portlet</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Timeline</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 b-l b-light">-->
+                <!--<div class="m-l-xs m-t-xs m-b-sm font-bold">Analysis</div>-->
+                <!--<div class="text-center">-->
+                <!--<div class="inline">-->
+                <!--<div ui-jq="easyPieChart" ui-options="{ percent: 65, lineWidth: 50,-->
+                <!--trackColor: '#e8eff0', barColor: '#23b7e5', scaleColor: false, size: 100,-->
+                <!--rotate: 90, lineCap: 'butt', animate: 2000 }">-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+                <li class="">
+                    <a href="read_lead_listing.html"><span translate="header.navbar.new.NEW">Leads</span></a>
+                </li>
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Accounts</span></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Sales</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Contacts</a></li>
+                        <li><a href translate="header.navbar.new.USER">Companies</a></li>
+                        <li><a href translate="header.navbar.new.USER">Deals</a></li>
+                        <li><a href translate="header.navbar.new.USER">Calendar</a></li>
+                        <li><a href translate="header.navbar.new.USER">Tasks</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Marketing</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Campaigns</a></li>
+                        <li><a href translate="header.navbar.new.USER">Triggers</a></li>
+                        <li><a href translate="header.navbar.new.USER">WorkflowRules</a></li>
+                        <li><a href translate="header.navbar.new.USER">Landing Pages</a></li>
+                        <li><a href translate="header.navbar.new.USER">Email Templates</a></li>
+                        <li><a href translate="header.navbar.new.USER">Social</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown hide">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Support</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Cases</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Cases</span></a>
+                </li>
+                <!--<li class="">-->
+                <!--<a href="#"><span translate="header.navbar.new.NEW">Projects</span></a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                <!--<a href="#"><span translate="header.navbar.new.NEW">Documents</span></a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                <!--<a href="#"><span translate="header.navbar.new.NEW">Activities</span></a>-->
+                <!--</li>-->
+                <li class="">
+                    <a href="#"><span translate="header.navbar.new.NEW">Reports</span></a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW"><i class="fa  fa-ellipsis-h"></i></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Projects</a></li>
+                        <li><a href translate="header.navbar.new.USER">Documents</a></li>
+                        <li><a href translate="header.navbar.new.USER">Activities</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown hide">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Settings</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Setup</a></li>
+                        <li><a href translate="header.navbar.new.USER">Users & Roles</a></li>
+                        <li><a href translate="header.navbar.new.USER">Permissions</a></li>
+                        <li><a href translate="header.navbar.new.USER">Customization</a></li>
+                        <li><a href translate="header.navbar.new.USER">Automation</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown hide">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                        <span translate="header.navbar.new.NEW">Help</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" translate="header.navbar.new.PROJECT">Help Desk</a></li>
+                        <li><a href translate="header.navbar.new.USER">Tutorials</a></li>
+                        <li><a href translate="header.navbar.new.USER">Feedback</a></li>
+                    </ul>
+                </li>
+                <!--<li class="dropdown">-->
+                <!--<a href="#" data-toggle="dropdown" class="dropdown-toggle">-->
+                <!--<i class="fa fa-fw fa-plus visible-xs-inline-block"></i>-->
+                <!--<span translate="header.navbar.new.NEW">New</span> <span class="caret"></span>-->
+                <!--</a>-->
+                <!--<ul class="dropdown-menu" role="menu">-->
+                <!--<li><a href="#" translate="header.navbar.new.PROJECT">Projects</a></li>-->
+                <!--<li>-->
+                <!--<a href>-->
+                <!--<span class="badge bg-info pull-right">5</span>-->
+                <!--<span translate="header.navbar.new.TASK">Task</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li><a href translate="header.navbar.new.USER">User</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li>-->
+                <!--<a href>-->
+                <!--<span class="badge bg-danger pull-right">4</span>-->
+                <!--<span translate="header.navbar.new.EMAIL">Email</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</li>-->
+            </ul>
+            <!-- / link and dropdown -->
+
+            <!-- nabar right -->
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li class="hidden-xs">-->
+                <!--<a class="js-toggle-requestfullscreen">-->
+                <!--<i class="fa fa-expand fa-fw "></i>-->
+                <!--</a>-->
+                <!--<a class="js-toggle-exitfullscreen" style="display:none;">-->
+                <!--<i class="fa fa-compress fa-fw "></i>-->
+                <!--</a>-->
+                <!--</li>-->
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <i class="icon-bell fa-fw"></i>
+                        <span class="visible-xs-inline">Notifications</span>
+                        <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+                    </a>
+                    <!-- dropdown -->
+                    <div class="dropdown-menu w-xl"><!-- animated fadeIn -->
+                        <div class="panel bg-white">
+                            <div class="panel-heading b-light bg-light">
+                                <strong>You have <span>2</span> notifications</strong>
+                            </div>
+                            <div class="list-group">
+                                <a href class="list-group-item">
+                    <span class="pull-left m-r thumb-sm">
+                      <img src="img/a0.jpg" alt="..." class="img-circle">
+                    </span>
+                                    <span class="clear block m-b-none">
+                      Use awesome animate.css<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                                </a>
+                                <a href class="list-group-item">
+                    <span class="clear block m-b-none">
+                      1.0 initial released<br>
+                      <small class="text-muted">1 hour ago</small>
+                    </span>
+                                </a>
+                            </div>
+                            <div class="panel-footer text-sm">
+                                <a href class="pull-right"><i class="fa fa-cog"></i></a>
+                                <a href="#notes" data-toggle="class:show animated fadeInRight">See all the
+                                    notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / dropdown -->
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-left m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="img/a0.jpg" alt="...">
+                <i class="on md b-white bottom"></i>
+              </span>
+                        <span class="visible-xs">John.Smith</span> <b class=" visible-xs caret"></b>
+                    </a>
+                    <!-- dropdown -->
+                    <ul class="dropdown-menu  w"><!--animated fadeIn-->
+                        <li class="wrapper b-b m-b-sm bg-light m-t-n-xs">
+                            <div>
+                                <p>300mb of 500mb used</p>
+                            </div>
+                            <div class="progress progress-xs m-b-none dker">
+                                <div class="progress-bar progress-bar-info" data-toggle="tooltip"
+                                     data-original-title="50%" style="width: 50%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href>
+                                <span class="badge bg-danger pull-right">30%</span>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="app.page.profile">Profile</a>
+                        </li>
+                        <li>
+                            <a ui-sref="app.docs">
+                                <span class="label bg-info pull-right">new</span>
+                                Help
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a ui-sref="access.signin">Logout</a>
+                        </li>
+                    </ul>
+                    <!-- / dropdown -->
+                </li>
+            </ul>
+            <!-- / navbar right -->
+
+            <!-- search form -->
+            <form class="navbar-form navbar-form-sm navbar-right shift navbar-search" ui-shift="prependTo"
+                  data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" ng-model="selected"
+                               typeahead="state for state in states | filter:$viewValue | limitTo:8"
+                               class="form-control input-sm bg-light no-border rounded padder"
+                               placeholder="Search projects...">
+                        <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
+                    </div>
+                </div>
+            </form>
+            <!-- / search form -->
+
+        </div>
+        <!-- / navbar collapse -->
+    </header>
+    <!-- / header -->
+
+    <!-- content -->
+    <div id="content" class="app-content m-n " role="main">
+        <div class="app-content-body app-content-full ">
+
+            <div class="hbox hbox-auto-xs bg-light">
+                <div class="col w-md b-r filter-box lter">
+                    <div class="vbox">
+                        <div class="row-row">
+                            <div class="cell">
+                                <div class="cell-inner">
+                                    <div class="lead-detail-items">
+                                        <div class="panel panel-default no-border no-shadow">
+                                            <div class="panel-heading">
+                                                <div class="clearfix">
+                                                    <a href="#" class="pull-left thumb-md avatar b-3x m-r">
+                                                        <img src="img/a2.jpg" alt="...">
+                                                    </a>
+                                                    <div class="clear">
+                                                        <div class="h3 m-t-xs m-b-xs">
+                                                            John Smith
+                                                        </div>
+                                                        <small class=" badge badge-sm bg-primary "
+                                                               style="    color: #f4f3f9;background-color: #7266ba;">
+                                                            LEAD
+                                                        </small>
+                                                        <div class="pull-right dropdown">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                                <i class="icon-settings text-base"></i>
+                                                            </a>
+                                                            <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="#">Edit</a></li>
+                                                                <li><a href="#">Delete</a></li>
+                                                                <li><a href="#">Other Actions</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group no-radius alt bg-light">
+                                                <a class="list-group-item lter " href="#"
+                                                   data-target="#lead-details-block" role="tab" data-toggle="tab"
+                                                   aria-expanded="false">
+                                                    <!--<span class="badge bg-success">25</span>-->
+                                                    <i class="fa fa-file-text-o fa-fw  text-info-dker"></i>
+                                                    <span class="text-info-dker font-bold">Info</span>
+                                                </a>
+                                                <a class="list-group-item lter" href="#"
+                                                   data-target="#lead-history-block" role="tab" data-toggle="tab"
+                                                   aria-expanded="false">
+                                                    <!--<span class="">16</span>-->
+                                                    <i class="fa fa-line-chart fa-fw text-muted"></i>
+                                                    Timeline
+                                                    <span class="pull-right text-xs text-muted"
+                                                          style="    font-size: 10px;margin-top: 5px;">Last Update: 4 day(s) ago</span>
+                                                </a>
+
+                                            </div>
+
+                                            <div class="wrapper bg-light lter" style="padding-top: 30px;">
+                                                <span class="text-base font-bold text-capitalize ">RELATED ITEMS</span>
+                                            </div>
+
+                                            <div class="list-group no-radius alt bg-light">
+
+                                                <a class="list-group-item lter " href="">
+                                                    <!--<span class="badge bg-success">25</span>-->
+                                                    <span class="">Notes <span
+                                                            class="m-l-sm label label-default bg-light dker text-primary lter">12</span></span>
+                                                </a>
+                                                <a class="list-group-item lter" href="">
+                                                    <span>Attachments</span>
+                                                </a>
+                                                <a class="list-group-item lter" href="#lead_next_subscriptions">
+                                                    <span>Subscriptions</span>
+                                                </a>
+                                                <a class="list-group-item lter" href="">
+                                                    <span>Open Activities <span
+                                                            class="m-l-sm label label-default bg-light dker text-primary lter">1</span></span>
+                                                </a>
+                                                <a class="list-group-item lter" href="">
+                                                    <span>Closed Activities</span>
+                                                </a>
+                                                <a class="list-group-item lter" href="">
+                                                    <span>Messages</span>
+                                                </a>
+                                                <a class="list-group-item lter" href="">
+                                                    <span>Complaints <span
+                                                            class="m-l-sm label label-default bg-light dker text-primary lter">4</span></span>
+                                                </a>
+                                                <a class="list-group-item lter" href="">
+                                                    <span>Campaigns</span>
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+
+                    <div class="vbox">
+                        <div class="row-row">
+                            <div class="cell">
+                                <div class="cell-inner tab-content">
+
+                                    <div id="lead-details-block" role="tabpanel"
+                                         class="tab-pane active wrapper lead-details-block">
+
+                                        <div class="row m-b">
+                                            <div class="col-md-12">
+                                                <div class="panel panel-default no-shadow no-border m-n lead-details-input-group"
+                                                     style=" border-top: 4px solid;">
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                            <div class="col-md-6  form-horizontal">
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">First
+                                                                        Name</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="email" class="form-control"
+                                                                               value="John" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="col-md-1 lead-detail-field-actions">
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-pencil text-info"></i>
+                                                                        </button>
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-clock text-info"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Last
+                                                                        Name</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="email" class="form-control"
+                                                                               value="Smith" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="col-md-1 lead-detail-field-actions">
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-pencil text-info"></i>
+                                                                        </button>
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-clock text-info"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Email</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="email" class="form-control"
+                                                                               value="john.smith@email.com"
+                                                                               autocomplete="off">
+                                                                    </div>
+                                                                    <div class="col-md-1 lead-detail-field-actions">
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-pencil text-info"></i>
+                                                                        </button>
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-clock text-info"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Phone
+                                                                        Number</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="email" class="form-control"
+                                                                               value="+91-9999999999"
+                                                                               autocomplete="off">
+                                                                    </div>
+                                                                    <div class="col-md-1 lead-detail-field-actions">
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-pencil text-info"></i>
+                                                                        </button>
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-clock text-info"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Address</label>
+                                                                    <div class="col-md-8">
+                                                                        <textarea class="no-resize form-control">123/23, Moon Street, Sector 43, Delhi - 110023</textarea>
+                                                                    </div>
+                                                                    <div class="col-md-1 lead-detail-field-actions">
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-pencil text-info"></i>
+                                                                        </button>
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-clock text-info"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6  form-horizontal">
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label font-bold">Owner</label>
+                                                                    <div class="col-md-8">
+                                                                        <div class="input-group m-b">
+                                                                              <span class="input-group-addon bg-white no-border"
+                                                                                    style="padding: 0px 8px 0px 0px;">
+                                                                                  <i class="icon-lock text-danger"></i>
+                                                                              </span>
+                                                                            <input type="text"
+                                                                                   class="form-control inline "
+                                                                                   value="Arun Meena (arun.meena@gmail.com)"
+                                                                                   autocomplete="off">
+                                                                            <!--<span class="input-group-addon">.00</span>-->
+                                                                        </div>
+                                                                        <!--<div>-->
+
+                                                                        <!--<i class="icon-lock inline text-danger"></i>-->
+                                                                        <!--<input type="text" class="form-control inline"-->
+                                                                        <!--value="Arun Meena (arun.meena@gmail.com)"-->
+                                                                        <!--autocomplete="off">-->
+                                                                        <!--</div>-->
+                                                                    </div>
+                                                                    <div class="col-md-1 lead-detail-field-actions">
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-pencil text-info"></i>
+                                                                        </button>
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-clock text-info"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Last
+                                                                        Contacted</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="text" class="form-control"
+                                                                               value="10/03/2017 19:26 GMT+5:30"
+                                                                               autocomplete="off">
+                                                                    </div>
+                                                                    <div class="col-md-1 lead-detail-field-actions">
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-pencil text-info"></i>
+                                                                        </button>
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-clock text-info"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Lead
+                                                                        Stage</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="text" class="form-control"
+                                                                               value="Verified"
+                                                                               autocomplete="off">
+                                                                    </div>
+                                                                    <div class="col-md-1 lead-detail-field-actions">
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-pencil text-info"></i>
+                                                                        </button>
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-clock text-info"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Lead
+                                                                        Status</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="text" class="form-control "
+                                                                               style="    color: #19a9d5;"
+                                                                               value="Renewal" autocomplete="off">
+                                                                    </div>
+                                                                    <div class="col-md-1 lead-detail-field-actions">
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-pencil text-info"></i>
+                                                                        </button>
+                                                                        <button class="btn btn-xs btn-default btn-flat">
+                                                                            <i class="icon-clock text-info"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="m-t pull-right m-r-lg">
+                                                                    <button class="btn btn-default btn-sm">Show
+                                                                        Details
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <div class="panel panel-flat lead-detail-action-blocks">
+                                                    <div class="">
+                                                        <div class="nav-tabs-alt">
+                                                            <ul class="nav nav-tabs" role="tablist">
+                                                                <li class="">
+                                                                    <a data-target="#tab-1" role="tab" data-toggle="tab"
+                                                                       aria-expanded="true" title="New Note">
+                                                                        <i class="glyphicon glyphicon-edit text-sm text-muted wrapper-sm"></i>
+                                                                        New Note
+                                                                    </a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a data-target="#tab-2" role="tab" data-toggle="tab"
+                                                                       aria-expanded="false" title="Email">
+                                                                        <i class="glyphicon glyphicon-envelope text-sm text-muted wrapper-sm"></i>
+                                                                        Email
+                                                                    </a>
+                                                                </li>
+                                                                <!--<li class="">-->
+                                                                <!--<a data-target="#tab-3" role="tab" data-toggle="tab"-->
+                                                                <!--aria-expanded="false" title="Call">-->
+                                                                <!--<i class="glyphicon glyphicon-phone-alt text-md text-muted wrapper-sm"></i>-->
+                                                                <!--&lt;!&ndash;Call&ndash;&gt;-->
+                                                                <!--</a>-->
+                                                                <!--</li>-->
+                                                                <li class="">
+                                                                    <a data-target="#tab-4" role="tab" data-toggle="tab"
+                                                                       aria-expanded="false" title="Log Activity">
+                                                                        <i class="glyphicon glyphicon-plus text-sm text-muted wrapper-sm"></i>
+                                                                        Log Activity
+                                                                    </a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a data-target="#tab-5" role="tab" data-toggle="tab"
+                                                                       aria-expanded="false" title="Task">
+                                                                        <i class="glyphicon glyphicon-ok-sign text-sm text-muted wrapper-sm"></i>
+                                                                        Task
+                                                                    </a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a data-target="#tab-6" role="tab" data-toggle="tab"
+                                                                       aria-expanded="false" title="Schedule">
+                                                                        <i class="glyphicon glyphicon-time text-sm text-muted wrapper-sm"></i>
+                                                                        Schedule
+                                                                    </a>
+                                                                </li>
+                                                                <li class=" pull-right dropdown">
+                                                                    <a href="#" data-toggle="dropdown"
+                                                                       class="dropdown-toggle">
+                                                                        <i class="fa  fa-ellipsis-v  text-sm text-muted wrapper-sm"></i>
+                                                                    </a>
+                                                                    <ul class="dropdown-menu text-primary-dker"
+                                                                        role="menu">
+                                                                        <li><a href="#">Events</a>
+                                                                        </li>
+                                                                        <li><a href="">Message</a>
+                                                                        </li>
+                                                                        <li><a href="">Activities</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="tab-content hide  b-b ">
+                                                            <div role="tabpanel" class="tab-pane active" id="tab-1">
+                                                                <div class="panel-body">
+                                                                    <div ui-jq="wysiwyg" class="form-control "
+                                                                         style="overflow:scroll;height:150px;max-height:150px; border: none; padding: 0px;">
+                                                                        Start typing to leave a note...
+                                                                    </div>
+                                                                    <div class="btn-toolbar m-b-sm btn-editor"
+                                                                         data-role="editor-toolbar"
+                                                                         data-target="#editor">
+                                                                        <div class="btn-group dropdown" dropdown>
+                                                                            <a class="btn btn-default" dropdown-toggle
+                                                                               data-toggle="dropdown"
+                                                                               tooltip="Font Size"><i
+                                                                                    class="fa fa-text-height"></i>&nbsp;<b
+                                                                                    class="caret"></b></a>
+                                                                            <ul class="dropdown-menu">
+                                                                                <li><a href data-edit="fontSize 5"
+                                                                                       style="font-size:24px">Huge</a>
+                                                                                </li>
+                                                                                <li><a href data-edit="fontSize 3"
+                                                                                       style="font-size:18px">Normal</a>
+                                                                                </li>
+                                                                                <li><a href data-edit="fontSize 1"
+                                                                                       style="font-size:14px">Small</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="btn-group">
+                                                                            <a class="btn btn-default" data-edit="bold"
+                                                                               tooltip="Bold (Ctrl/Cmd+B)"><i
+                                                                                    class="fa fa-bold"></i></a>
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="italic"
+                                                                               tooltip="Italic (Ctrl/Cmd+I)"><i
+                                                                                    class="fa fa-italic"></i></a>
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="strikethrough"
+                                                                               tooltip="Strikethrough"><i
+                                                                                    class="fa fa-strikethrough"></i></a>
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="underline"
+                                                                               tooltip="Underline (Ctrl/Cmd+U)"><i
+                                                                                    class="fa fa-underline"></i></a>
+                                                                        </div>
+                                                                        <div class="btn-group">
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="insertunorderedlist"
+                                                                               tooltip="Bullet list"><i
+                                                                                    class="fa fa-list-ul"></i></a>
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="insertorderedlist"
+                                                                               tooltip="Number list"><i
+                                                                                    class="fa fa-list-ol"></i></a>
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="outdent"
+                                                                               tooltip="Reduce indent (Shift+Tab)"><i
+                                                                                    class="fa fa-dedent"></i></a>
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="indent"
+                                                                               tooltip="Indent (Tab)"><i
+                                                                                    class="fa fa-indent"></i></a>
+                                                                        </div>
+                                                                        <div class="btn-group">
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="justifyleft"
+                                                                               tooltip="Align Left (Ctrl/Cmd+L)"><i
+                                                                                    class="fa fa-align-left"></i></a>
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="justifycenter"
+                                                                               tooltip="Center (Ctrl/Cmd+E)"><i
+                                                                                    class="fa fa-align-center"></i></a>
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="justifyright"
+                                                                               tooltip="Align Right (Ctrl/Cmd+R)"><i
+                                                                                    class="fa fa-align-right"></i></a>
+                                                                            <a class="btn btn-default"
+                                                                               data-edit="justifyfull"
+                                                                               tooltip="Justify (Ctrl/Cmd+J)"><i
+                                                                                    class="fa fa-align-justify"></i></a>
+                                                                        </div>
+                                                                        <div class="btn-group dropdown">
+                                                                            <a class="btn btn-default dropdown-toggle"
+                                                                               data-toggle="dropdown"
+                                                                               tooltip="Hyperlink"><i
+                                                                                    class="fa fa-link"></i></a>
+                                                                            <div class="dropdown-menu">
+                                                                                <div class="input-group m-l-xs m-r-xs">
+                                                                                    <input class="form-control input-sm"
+                                                                                           id="LinkInput"
+                                                                                           placeholder="URL"
+                                                                                           type="text"
+                                                                                           data-edit="createLink"/>
+                                                                                    <div class="input-group-btn">
+                                                                                        <button class="btn btn-sm btn-default"
+                                                                                                type="button">Add
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--<a class="btn btn-default" data-edit="unlink"-->
+                                                                            <!--tooltip="Remove Hyperlink"><i-->
+                                                                            <!--class="fa fa-cut"></i></a>-->
+                                                                        </div>
+
+                                                                        <!--<div class="btn-group">-->
+                                                                        <!--<a class="btn btn-default"-->
+                                                                        <!--tooltip="Insert picture (or just drag & drop)"-->
+                                                                        <!--id="pictureBtn"><i-->
+                                                                        <!--class="fa fa-picture-o"></i></a>-->
+                                                                        <!--<input type="file" data-edit="insertImage"-->
+                                                                        <!--style="position:absolute; opacity:0; width:41px; height:34px"/>-->
+                                                                        <!--</div>-->
+                                                                        <!--<div class="btn-group">-->
+                                                                        <!--<a class="btn btn-default" data-edit="undo"-->
+                                                                        <!--tooltip="Undo (Ctrl/Cmd+Z)"><i-->
+                                                                        <!--class="fa fa-undo"></i></a>-->
+                                                                        <!--<a class="btn btn-default" data-edit="redo"-->
+                                                                        <!--tooltip="Redo (Ctrl/Cmd+Y)"><i-->
+                                                                        <!--class="fa fa-repeat"></i></a>-->
+                                                                        <!--</div>-->
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="bg-light panel-body">
+                                                                    <button class="btn btn-success btn-sm">
+                                                                        Save Note
+                                                                    </button>
+
+                                                                    <button class="btn btn-sm bg-white text-danger b-danger m-l-sm">
+                                                                        Cancel
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                            <div role="tabpanel" class="tab-pane tab-2" id="tab-2">
+                                                                <div class="panel-body">
+                                                                    <div class="m-b-sm text-md">Chat</div>
+                                                                    <ul class="list-group no-borders pull-in auto">
+                                                                        <li class="list-group-item">
+                                                                    <span class="pull-left thumb-sm m-r"><img
+                                                                            src="img/a1.jpg" alt="..."
+                                                                            class="img-circle"></span>
+                                                                            <a href="#" class="text-muted"
+                                                                               ui-toggle-class="show"
+                                                                               target=".app-aside-right"><i
+                                                                                    class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+                                                                            <div class="clear">
+                                                                                <div><a href="">Chris Fox</a></div>
+                                                                                <small class="text-muted">about 2
+                                                                                    minutes ago
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="list-group-item">
+                                                                    <span class="pull-left thumb-sm m-r"><img
+                                                                            src="img/a2.jpg" alt="..."
+                                                                            class="img-circle"></span>
+                                                                            <a href="#" class="text-muted"
+                                                                               ui-toggle-class="show"
+                                                                               target=".app-aside-right"><i
+                                                                                    class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+                                                                            <div class="clear">
+                                                                                <div><a href="">Amanda Conlan</a></div>
+                                                                                <small class="text-muted">about 2 hours
+                                                                                    ago
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="list-group-item">
+                                                                    <span class="pull-left thumb-sm m-r"><img
+                                                                            src="img/a3.jpg" alt="..."
+                                                                            class="img-circle"></span>
+                                                                            <a href="" class="text-muted"
+                                                                               ui-toggle-class="show"
+                                                                               target=".app-aside-right"><i
+                                                                                    class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+                                                                            <div class="clear">
+                                                                                <div><a href="">Dan Doorack</a></div>
+                                                                                <small class="text-muted">3 days ago
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="list-group-item">
+                                                                    <span class="pull-left thumb-sm m-r"><img
+                                                                            src="img/a4.jpg" alt="..."
+                                                                            class="img-circle"></span>
+                                                                            <a href="" class="text-muted"
+                                                                               ui-toggle-class="show"
+                                                                               target=".app-aside-right"><i
+                                                                                    class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
+                                                                            <div class="clear">
+                                                                                <div><a href="">Lauren Taylor</a></div>
+                                                                                <small class="text-muted">about 2
+                                                                                    minutes ago
+                                                                                </small>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div role="tabpanel" class="tab-pane tab-3" id="tab-3">
+                                                                <div class="panel-body">
+                                                                    <div class="m-b-sm text-md">Transaction</div>
+                                                                    <ul class="list-group list-group-sm list-group-sp list-group-alt auto m-t">
+                                                                        <li class="list-group-item">
+                                                                            <span class="text-muted">Transfer to Jacob at 3:00 pm</span>
+                                                                            <span class="block text-md text-info">B 15,000.00</span>
+                                                                        </li>
+                                                                        <li class="list-group-item">
+                                                                            <span class="text-muted">Got from Mike at 1:00 pm</span>
+                                                                            <span class="block text-md text-primary">B 23,000.00</span>
+                                                                        </li>
+                                                                        <li class="list-group-item">
+                                                                            <span class="text-muted">Sponsored ORG at 9:00 am</span>
+                                                                            <span class="block text-md text-warning">B 3,000.00</span>
+                                                                        </li>
+                                                                        <li class="list-group-item">
+                                                                            <span class="text-muted">Send to Jacob at 8:00 am</span>
+                                                                            <span class="block text-md">B 11,000.00</span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div role="tabpanel" class="tab-pane tab-3" id="tab-4">
+                                                                <div class="panel-body">
+                                                                    <div class="m-b-xs">
+                                                                        <div class="btn-group dropdown">
+                                                                            <button type="button"
+                                                                                    class="btn btn-default btn-flat btn-underline"
+                                                                                    data-toggle="dropdown"
+                                                                                    style="padding-left: 0px;">
+                                                                                <span class="text-info-dk m-r-xs">Log a Call</span>
+                                                                                <span class="caret"></span>
+                                                                            </button>
+                                                                            <ul class="dropdown-menu">
+                                                                                <li><a href="">Log a Call</a></li>
+                                                                                <li><a href="">Log an Email</a></li>
+                                                                                <li><a href="">Log a Meeting</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="btn-group dropdown m-l-md">
+                                                                            <button type="button"
+                                                                                    class="btn btn-default btn-flat btn-underline"
+                                                                                    data-toggle="dropdown"
+                                                                                    style="padding-left: 0px;">
+                                                                                <span class="text-info-dk m-r-xs">Select an outcome</span>
+                                                                                <span class="caret"></span>
+                                                                            </button>
+                                                                            <ul class="dropdown-menu">
+                                                                                <li><a href="">No Answer</a></li>
+                                                                                <li><a href="">Busy</a></li>
+                                                                                <li><a href="">Wrong Number</a></li>
+                                                                                <li><a href="">Left voicemail</a></li>
+                                                                                <li><a href="">Connected</a></li>
+                                                                                <li><a href="">more...</a></li>
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div class="pull-right col-md-6 "
+                                                                             style="text-align: right;">
+
+                                                                            <i class="icon-calendar text-xs "></i>
+                                                                            <input type='text'
+                                                                                   class="form-control text-info-dk inline no-border datepicker"
+                                                                                   value="04/07/2017"
+                                                                                   style="width: 100px; "/>
+
+                                                                            <i class="icon-clock text-xs m-l "></i>
+                                                                            <input type='text'
+                                                                                   class="form-control text-info-dk inline no-border timepicker"
+                                                                                   value="1:56 PM"
+                                                                                   style="width: 100px; "/>
+
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="">
+                                                                        <div ui-jq="wysiwyg" class="form-control "
+                                                                             style="overflow:scroll;height:150px;max-height:150px; border: none; padding: 0px;">
+                                                                            Describe the call...
+                                                                        </div>
+                                                                        <div class="btn-toolbar m-b-sm btn-editor"
+                                                                             data-role="editor-toolbar"
+                                                                             data-target="#editor">
+                                                                            <div class="btn-group dropdown" dropdown>
+                                                                                <a class="btn btn-default"
+                                                                                   dropdown-toggle
+                                                                                   data-toggle="dropdown"
+                                                                                   tooltip="Font Size"><i
+                                                                                        class="fa fa-text-height"></i>&nbsp;<b
+                                                                                        class="caret"></b></a>
+                                                                                <ul class="dropdown-menu">
+                                                                                    <li><a href data-edit="fontSize 5"
+                                                                                           style="font-size:24px">Huge</a>
+                                                                                    </li>
+                                                                                    <li><a href data-edit="fontSize 3"
+                                                                                           style="font-size:18px">Normal</a>
+                                                                                    </li>
+                                                                                    <li><a href data-edit="fontSize 1"
+                                                                                           style="font-size:14px">Small</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="bold"
+                                                                                   tooltip="Bold (Ctrl/Cmd+B)"><i
+                                                                                        class="fa fa-bold"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="italic"
+                                                                                   tooltip="Italic (Ctrl/Cmd+I)"><i
+                                                                                        class="fa fa-italic"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="strikethrough"
+                                                                                   tooltip="Strikethrough"><i
+                                                                                        class="fa fa-strikethrough"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="underline"
+                                                                                   tooltip="Underline (Ctrl/Cmd+U)"><i
+                                                                                        class="fa fa-underline"></i></a>
+                                                                            </div>
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="insertunorderedlist"
+                                                                                   tooltip="Bullet list"><i
+                                                                                        class="fa fa-list-ul"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="insertorderedlist"
+                                                                                   tooltip="Number list"><i
+                                                                                        class="fa fa-list-ol"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="outdent"
+                                                                                   tooltip="Reduce indent (Shift+Tab)"><i
+                                                                                        class="fa fa-dedent"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="indent"
+                                                                                   tooltip="Indent (Tab)"><i
+                                                                                        class="fa fa-indent"></i></a>
+                                                                            </div>
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="justifyleft"
+                                                                                   tooltip="Align Left (Ctrl/Cmd+L)"><i
+                                                                                        class="fa fa-align-left"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="justifycenter"
+                                                                                   tooltip="Center (Ctrl/Cmd+E)"><i
+                                                                                        class="fa fa-align-center"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="justifyright"
+                                                                                   tooltip="Align Right (Ctrl/Cmd+R)"><i
+                                                                                        class="fa fa-align-right"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="justifyfull"
+                                                                                   tooltip="Justify (Ctrl/Cmd+J)"><i
+                                                                                        class="fa fa-align-justify"></i></a>
+                                                                            </div>
+                                                                            <div class="btn-group dropdown">
+                                                                                <a class="btn btn-default dropdown-toggle"
+                                                                                   data-toggle="dropdown"
+                                                                                   tooltip="Hyperlink"><i
+                                                                                        class="fa fa-link"></i></a>
+                                                                                <div class="dropdown-menu">
+                                                                                    <div class="input-group m-l-xs m-r-xs">
+                                                                                        <input class="form-control input-sm"
+                                                                                               id="LinkInput"
+                                                                                               placeholder="URL"
+                                                                                               type="text"
+                                                                                               data-edit="createLink"/>
+                                                                                        <div class="input-group-btn">
+                                                                                            <button class="btn btn-sm btn-default"
+                                                                                                    type="button">Add
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!--<a class="btn btn-default" data-edit="unlink"-->
+                                                                                <!--tooltip="Remove Hyperlink"><i-->
+                                                                                <!--class="fa fa-cut"></i></a>-->
+                                                                            </div>
+
+                                                                            <!--<div class="btn-group">-->
+                                                                            <!--<a class="btn btn-default"-->
+                                                                            <!--tooltip="Insert picture (or just drag & drop)"-->
+                                                                            <!--id="pictureBtn"><i-->
+                                                                            <!--class="fa fa-picture-o"></i></a>-->
+                                                                            <!--<input type="file" data-edit="insertImage"-->
+                                                                            <!--style="position:absolute; opacity:0; width:41px; height:34px"/>-->
+                                                                            <!--</div>-->
+                                                                            <!--<div class="btn-group">-->
+                                                                            <!--<a class="btn btn-default" data-edit="undo"-->
+                                                                            <!--tooltip="Undo (Ctrl/Cmd+Z)"><i-->
+                                                                            <!--class="fa fa-undo"></i></a>-->
+                                                                            <!--<a class="btn btn-default" data-edit="redo"-->
+                                                                            <!--tooltip="Redo (Ctrl/Cmd+Y)"><i-->
+                                                                            <!--class="fa fa-repeat"></i></a>-->
+                                                                            <!--</div>-->
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bg-light panel-body">
+                                                                    <button class="btn btn-success btn-sm">
+                                                                        Log Activity
+                                                                    </button>
+
+                                                                    <button class="btn btn-sm bg-white text-danger b-danger m-l-sm">
+                                                                        Cancel
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                            <div role="tabpanel" class="tab-pane tab-3" id="tab-5">
+                                                                <div class="panel-body">
+                                                                    <div class="m-b-xs b-b"
+                                                                         style="   ">
+
+                                                                        <input type="text" class="col-md-7"
+                                                                               placeholder="Enter your task"
+                                                                               style=" padding: 9px 0px;border: none;float: left;font-weight: 500;font-size: 16px;"/>
+
+                                                                        <div class=" col-md-5 pull-right "
+                                                                             style="text-align: right;">
+
+                                                                            <i class="icon-calendar text-xs "></i>
+                                                                            <input type='text'
+                                                                                   class="form-control text-info-dk inline no-border datepicker"
+                                                                                   value="04/07/2017"
+                                                                                   style="width: 100px; "/>
+
+                                                                            <i class="icon-clock text-xs m-l "></i>
+                                                                            <input type='text'
+                                                                                   class="form-control text-info-dk inline no-border timepicker"
+                                                                                   value="1:56 PM"
+                                                                                   style="width: 100px; "/>
+
+                                                                        </div>
+
+                                                                        <div class="clearfix"></div>
+
+                                                                    </div>
+
+                                                                    <div class="m-t-sm">
+                                                                        <div ui-jq="wysiwyg" class="form-control "
+                                                                             style="overflow:scroll;height:150px;max-height:150px; border: none; padding: 0px;     font-size: 14px;font-weight: 500;">
+                                                                            Describe the call...
+                                                                        </div>
+                                                                        <div class="btn-toolbar m-b-sm btn-editor"
+                                                                             data-role="editor-toolbar"
+                                                                             data-target="#editor">
+                                                                            <div class="btn-group dropdown" dropdown>
+                                                                                <a class="btn btn-default"
+                                                                                   dropdown-toggle
+                                                                                   data-toggle="dropdown"
+                                                                                   tooltip="Font Size"><i
+                                                                                        class="fa fa-text-height"></i>&nbsp;<b
+                                                                                        class="caret"></b></a>
+                                                                                <ul class="dropdown-menu">
+                                                                                    <li><a href data-edit="fontSize 5"
+                                                                                           style="font-size:24px">Huge</a>
+                                                                                    </li>
+                                                                                    <li><a href data-edit="fontSize 3"
+                                                                                           style="font-size:18px">Normal</a>
+                                                                                    </li>
+                                                                                    <li><a href data-edit="fontSize 1"
+                                                                                           style="font-size:14px">Small</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="bold"
+                                                                                   tooltip="Bold (Ctrl/Cmd+B)"><i
+                                                                                        class="fa fa-bold"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="italic"
+                                                                                   tooltip="Italic (Ctrl/Cmd+I)"><i
+                                                                                        class="fa fa-italic"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="strikethrough"
+                                                                                   tooltip="Strikethrough"><i
+                                                                                        class="fa fa-strikethrough"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="underline"
+                                                                                   tooltip="Underline (Ctrl/Cmd+U)"><i
+                                                                                        class="fa fa-underline"></i></a>
+                                                                            </div>
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="insertunorderedlist"
+                                                                                   tooltip="Bullet list"><i
+                                                                                        class="fa fa-list-ul"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="insertorderedlist"
+                                                                                   tooltip="Number list"><i
+                                                                                        class="fa fa-list-ol"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="outdent"
+                                                                                   tooltip="Reduce indent (Shift+Tab)"><i
+                                                                                        class="fa fa-dedent"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="indent"
+                                                                                   tooltip="Indent (Tab)"><i
+                                                                                        class="fa fa-indent"></i></a>
+                                                                            </div>
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="justifyleft"
+                                                                                   tooltip="Align Left (Ctrl/Cmd+L)"><i
+                                                                                        class="fa fa-align-left"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="justifycenter"
+                                                                                   tooltip="Center (Ctrl/Cmd+E)"><i
+                                                                                        class="fa fa-align-center"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="justifyright"
+                                                                                   tooltip="Align Right (Ctrl/Cmd+R)"><i
+                                                                                        class="fa fa-align-right"></i></a>
+                                                                                <a class="btn btn-default"
+                                                                                   data-edit="justifyfull"
+                                                                                   tooltip="Justify (Ctrl/Cmd+J)"><i
+                                                                                        class="fa fa-align-justify"></i></a>
+                                                                            </div>
+                                                                            <div class="btn-group dropdown">
+                                                                                <a class="btn btn-default dropdown-toggle"
+                                                                                   data-toggle="dropdown"
+                                                                                   tooltip="Hyperlink"><i
+                                                                                        class="fa fa-link"></i></a>
+                                                                                <div class="dropdown-menu">
+                                                                                    <div class="input-group m-l-xs m-r-xs">
+                                                                                        <input class="form-control input-sm"
+                                                                                               id="LinkInput"
+                                                                                               placeholder="URL"
+                                                                                               type="text"
+                                                                                               data-edit="createLink"/>
+                                                                                        <div class="input-group-btn">
+                                                                                            <button class="btn btn-sm btn-default"
+                                                                                                    type="button">Add
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!--<a class="btn btn-default" data-edit="unlink"-->
+                                                                                <!--tooltip="Remove Hyperlink"><i-->
+                                                                                <!--class="fa fa-cut"></i></a>-->
+                                                                            </div>
+
+                                                                            <!--<div class="btn-group">-->
+                                                                            <!--<a class="btn btn-default"-->
+                                                                            <!--tooltip="Insert picture (or just drag & drop)"-->
+                                                                            <!--id="pictureBtn"><i-->
+                                                                            <!--class="fa fa-picture-o"></i></a>-->
+                                                                            <!--<input type="file" data-edit="insertImage"-->
+                                                                            <!--style="position:absolute; opacity:0; width:41px; height:34px"/>-->
+                                                                            <!--</div>-->
+                                                                            <!--<div class="btn-group">-->
+                                                                            <!--<a class="btn btn-default" data-edit="undo"-->
+                                                                            <!--tooltip="Undo (Ctrl/Cmd+Z)"><i-->
+                                                                            <!--class="fa fa-undo"></i></a>-->
+                                                                            <!--<a class="btn btn-default" data-edit="redo"-->
+                                                                            <!--tooltip="Redo (Ctrl/Cmd+Y)"><i-->
+                                                                            <!--class="fa fa-repeat"></i></a>-->
+                                                                            <!--</div>-->
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="b-t m-t-md wrapper "
+                                                                         style="    padding-left: 0px;">
+                                                                        <div class="btn-group dropdown">
+                                                                            <div class="m-b-xs">Type</div>
+                                                                            <button type="button"
+                                                                                    class="btn btn-default btn-flat btn-underline"
+                                                                                    data-toggle="dropdown"
+                                                                                    style="padding-left: 0px;">
+                                                                                <span class="text-info-dk m-r-xs">To-do</span>
+                                                                                <span class="caret"></span>
+                                                                            </button>
+                                                                            <ul class="dropdown-menu">
+                                                                                <li><a href="">To-do</a></li>
+                                                                                <li><a href="">Email</a></li>
+                                                                                <li><a href="">Call</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="btn-group dropdown m-l-md">
+                                                                            <div class="m-b-xs">Assigned To</div>
+                                                                            <button type="button"
+                                                                                    class="btn btn-default btn-flat btn-underline"
+                                                                                    data-toggle="dropdown"
+                                                                                    style="padding-left: 0px;">
+                                                                                <span class="text-info-dk m-r-xs">Select an outcome</span>
+                                                                                <span class="caret"></span>
+                                                                            </button>
+                                                                            <ul class="dropdown-menu">
+                                                                                <li><a href="">No Answer</a></li>
+                                                                                <li><a href="">Busy</a></li>
+                                                                                <li><a href="">Wrong Number</a></li>
+                                                                                <li><a href="">Left voicemail</a></li>
+                                                                                <li><a href="">Connected</a></li>
+                                                                                <li><a href="">more...</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="btn-group  m-l-md">
+                                                                            <div class="m-b-xs">Reminder</div>
+                                                                            <span class="dropdown">
+                                                                                <button type="button"
+                                                                                        class="btn btn-default btn-flat btn-underline"
+                                                                                        data-toggle="dropdown"
+                                                                                        style="padding-left: 0px;">
+                                                                                    <span class="text-info-dk m-r-xs">The day of</span>
+                                                                                    <span class="caret"></span>
+                                                                                </button>
+                                                                                <ul class="dropdown-menu">
+                                                                                    <li><a href="">The day of</a></li>
+                                                                                    <li><a href="">The day before</a></li>
+                                                                                    <li><a href="">The week before</a></li>
+                                                                                    <li><a href="">Custom date</a></li>
+                                                                                    <li><a href="">No Reminder</a></li>
+                                                                                </ul>
+                                                                            </span>
+
+                                                                            <span class="reminder-custom-date hide v-middle">
+                                                                                <i class="icon-calendar text-xs "></i>
+                                                                                <input type='text'
+                                                                                       class="form-control text-info-dk inline no-border datepicker"
+                                                                                       value="04/07/2017"
+                                                                                       style="width: 100px; "/>
+                                                                            </span>
+
+                                                                            <span class="reminder-time  v-middle">
+
+                                                                                <i class="icon-clock text-xs m-l "></i>
+                                                                                <input type='text'
+                                                                                       class="form-control text-info-dk inline no-border timepicker"
+                                                                                       value="1:56 PM"
+                                                                                       style="width: 100px; "/>
+                                                                            </span>
+
+                                                                            <span class="dropdown">
+                                                                                <button type="button"
+                                                                                        class="btn btn-default btn-flat btn-underline"
+                                                                                        data-toggle="dropdown"
+                                                                                        style="padding-left: 0px;">
+                                                                                    <span class="text-info-dk m-r-xs">Email</span>
+                                                                                    <span class="caret"></span>
+                                                                                </button>
+                                                                                <ul class="dropdown-menu">
+                                                                                    <li><a href="">Email</a></li>
+                                                                                    <li><a href="">SMS</a></li>
+                                                                                    <li><a href="">Notification</a></li>
+                                                                                </ul>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="b-t wrapper "
+                                                                         style="    padding-left: 0px;">
+                                                                        <div class="h5">
+                                                                            Associated Items
+                                                                        </div>
+                                                                        <div class="">
+                                                                            <a href="#"
+                                                                               class="btn btn-flat btn-underline">
+                                                                                <i class="fa fa-plus fa-fw text-muted"></i>
+                                                                                <span class="text-info-dk m-l-xs">Add a Contacts</span>
+                                                                            </a>
+                                                                            <a href="#"
+                                                                               class="btn btn-flat btn-underline">
+                                                                                <i class="fa fa-plus fa-fw text-muted"></i>
+                                                                                <span class="text-info-dk m-l-xs">Add a Company</span>
+                                                                            </a>
+                                                                            <a href="#"
+                                                                               class="btn btn-flat btn-underline">
+                                                                                <i class="fa fa-plus fa-fw text-muted"></i>
+                                                                                <span class="text-info-dk m-l-xs">Add a Deal</span>
+                                                                            </a>
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bg-light panel-body">
+                                                                    <button class="btn btn-success btn-sm">
+                                                                        Save Task
+                                                                    </button>
+
+                                                                    <button class="btn btn-sm bg-white text-danger b-danger m-l-sm">
+                                                                        Cancel
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                            <div role="tabpanel" class="tab-pane tab-3" id="tab-6">
+                                                                <div class="panel-body">
+                                                                    <div class="b-b"
+                                                                         style="   ">
+
+                                                                        <input type="text" class="col-md-7"
+                                                                               placeholder="What are you meeting about?"
+                                                                               style=" padding: 9px 0px;border: none;float: left;font-weight: 500;font-size: 16px;"/>
+
+                                                                        <div class=" col-md-5 pull-right ">
+                                                                            <span>
+                                                                                <div class="text-xs ">Start time</div>
+
+                                                                                <i class="icon-calendar text-xs "></i>
+                                                                                <input type='text'
+                                                                                       class="form-control text-info-dk inline no-border datepicker"
+                                                                                       value="04/07/2017"
+                                                                                       style="width: 100px; "/>
+
+                                                                                <i class="icon-clock text-xs m-l "></i>
+                                                                                <input type='text'
+                                                                                       class="form-control text-info-dk inline no-border timepicker"
+                                                                                       value="1:56 PM"
+                                                                                       style="width: 100px; "/>
+                                                                            </span>
+
+                                                                        </div>
+
+                                                                        <div class="clearfix"></div>
+
+                                                                    </div>
+
+                                                                    <div class="row">
+                                                                        <div class="col-md-7 b-r">
+
+                                                                            <div class="m-t-sm">
+                                                                                <div ui-jq="wysiwyg"
+                                                                                     class="form-control "
+                                                                                     style="overflow:scroll;height:150px;max-height:150px; border: none; padding: 0px;     font-size: 14px;font-weight: 500;">
+                                                                                    Describe your meeting...
+                                                                                </div>
+                                                                                <div class="btn-toolbar m-b-sm btn-editor"
+                                                                                     data-role="editor-toolbar"
+                                                                                     data-target="#editor">
+                                                                                    <!--<div class="btn-group dropdown"-->
+                                                                                    <!--dropdown>-->
+                                                                                    <!--<a class="btn btn-default"-->
+                                                                                    <!--dropdown-toggle-->
+                                                                                    <!--data-toggle="dropdown"-->
+                                                                                    <!--tooltip="Font Size"><i-->
+                                                                                    <!--class="fa fa-text-height"></i>&nbsp;<b-->
+                                                                                    <!--class="caret"></b></a>-->
+                                                                                    <!--<ul class="dropdown-menu">-->
+                                                                                    <!--<li><a href-->
+                                                                                    <!--data-edit="fontSize 5"-->
+                                                                                    <!--style="font-size:24px">Huge</a>-->
+                                                                                    <!--</li>-->
+                                                                                    <!--<li><a href-->
+                                                                                    <!--data-edit="fontSize 3"-->
+                                                                                    <!--style="font-size:18px">Normal</a>-->
+                                                                                    <!--</li>-->
+                                                                                    <!--<li><a href-->
+                                                                                    <!--data-edit="fontSize 1"-->
+                                                                                    <!--style="font-size:14px">Small</a>-->
+                                                                                    <!--</li>-->
+                                                                                    <!--</ul>-->
+                                                                                    <!--</div>-->
+                                                                                    <div class="btn-group">
+                                                                                        <a class="btn btn-default"
+                                                                                           data-edit="bold"
+                                                                                           tooltip="Bold (Ctrl/Cmd+B)"><i
+                                                                                                class="fa fa-bold"></i></a>
+                                                                                        <a class="btn btn-default"
+                                                                                           data-edit="italic"
+                                                                                           tooltip="Italic (Ctrl/Cmd+I)"><i
+                                                                                                class="fa fa-italic"></i></a>
+                                                                                        <!--<a class="btn btn-default"-->
+                                                                                        <!--data-edit="strikethrough"-->
+                                                                                        <!--tooltip="Strikethrough"><i-->
+                                                                                        <!--class="fa fa-strikethrough"></i></a>-->
+                                                                                        <a class="btn btn-default"
+                                                                                           data-edit="underline"
+                                                                                           tooltip="Underline (Ctrl/Cmd+U)"><i
+                                                                                                class="fa fa-underline"></i></a>
+                                                                                    </div>
+                                                                                    <div class="btn-group">
+                                                                                        <a class="btn btn-default"
+                                                                                           data-edit="insertunorderedlist"
+                                                                                           tooltip="Bullet list"><i
+                                                                                                class="fa fa-list-ul"></i></a>
+                                                                                        <a class="btn btn-default"
+                                                                                           data-edit="insertorderedlist"
+                                                                                           tooltip="Number list"><i
+                                                                                                class="fa fa-list-ol"></i></a>
+                                                                                        <a class="btn btn-default"
+                                                                                           data-edit="outdent"
+                                                                                           tooltip="Reduce indent (Shift+Tab)"><i
+                                                                                                class="fa fa-dedent"></i></a>
+                                                                                        <a class="btn btn-default"
+                                                                                           data-edit="indent"
+                                                                                           tooltip="Indent (Tab)"><i
+                                                                                                class="fa fa-indent"></i></a>
+                                                                                    </div>
+                                                                                    <!--<div class="btn-group">-->
+                                                                                    <!--<a class="btn btn-default"-->
+                                                                                    <!--data-edit="justifyleft"-->
+                                                                                    <!--tooltip="Align Left (Ctrl/Cmd+L)"><i-->
+                                                                                    <!--class="fa fa-align-left"></i></a>-->
+                                                                                    <!--<a class="btn btn-default"-->
+                                                                                    <!--data-edit="justifycenter"-->
+                                                                                    <!--tooltip="Center (Ctrl/Cmd+E)"><i-->
+                                                                                    <!--class="fa fa-align-center"></i></a>-->
+                                                                                    <!--<a class="btn btn-default"-->
+                                                                                    <!--data-edit="justifyright"-->
+                                                                                    <!--tooltip="Align Right (Ctrl/Cmd+R)"><i-->
+                                                                                    <!--class="fa fa-align-right"></i></a>-->
+                                                                                    <!--<a class="btn btn-default"-->
+                                                                                    <!--data-edit="justifyfull"-->
+                                                                                    <!--tooltip="Justify (Ctrl/Cmd+J)"><i-->
+                                                                                    <!--class="fa fa-align-justify"></i></a>-->
+                                                                                    <!--</div>-->
+                                                                                    <!--<div class="btn-group dropdown">-->
+                                                                                    <!--<a class="btn btn-default dropdown-toggle"-->
+                                                                                    <!--data-toggle="dropdown"-->
+                                                                                    <!--tooltip="Hyperlink"><i-->
+                                                                                    <!--class="fa fa-link"></i></a>-->
+                                                                                    <!--<div class="dropdown-menu">-->
+                                                                                    <!--<div class="input-group m-l-xs m-r-xs">-->
+                                                                                    <!--<input class="form-control input-sm"-->
+                                                                                    <!--id="LinkInput"-->
+                                                                                    <!--placeholder="URL"-->
+                                                                                    <!--type="text"-->
+                                                                                    <!--data-edit="createLink"/>-->
+                                                                                    <!--<div class="input-group-btn">-->
+                                                                                    <!--<button class="btn btn-sm btn-default"-->
+                                                                                    <!--type="button">-->
+                                                                                    <!--Add-->
+                                                                                    <!--</button>-->
+                                                                                    <!--</div>-->
+                                                                                    <!--</div>-->
+                                                                                    <!--</div>-->
+                                                                                    <!--&lt;!&ndash;<a class="btn btn-default" data-edit="unlink"&ndash;&gt;-->
+                                                                                    <!--&lt;!&ndash;tooltip="Remove Hyperlink"><i&ndash;&gt;-->
+                                                                                    <!--&lt;!&ndash;class="fa fa-cut"></i></a>&ndash;&gt;-->
+                                                                                    <!--</div>-->
+
+                                                                                    <!--<div class="btn-group">-->
+                                                                                    <!--<a class="btn btn-default"-->
+                                                                                    <!--tooltip="Insert picture (or just drag & drop)"-->
+                                                                                    <!--id="pictureBtn"><i-->
+                                                                                    <!--class="fa fa-picture-o"></i></a>-->
+                                                                                    <!--<input type="file" data-edit="insertImage"-->
+                                                                                    <!--style="position:absolute; opacity:0; width:41px; height:34px"/>-->
+                                                                                    <!--</div>-->
+                                                                                    <!--<div class="btn-group">-->
+                                                                                    <!--<a class="btn btn-default" data-edit="undo"-->
+                                                                                    <!--tooltip="Undo (Ctrl/Cmd+Z)"><i-->
+                                                                                    <!--class="fa fa-undo"></i></a>-->
+                                                                                    <!--<a class="btn btn-default" data-edit="redo"-->
+                                                                                    <!--tooltip="Redo (Ctrl/Cmd+Y)"><i-->
+                                                                                    <!--class="fa fa-repeat"></i></a>-->
+                                                                                    <!--</div>-->
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <div class="b-t m-t-md wrapper "
+                                                                                 style="    padding-left: 0px;">
+                                                                                <div class="btn-group dropdown">
+                                                                                    <div class="m-b-xs">Duration</div>
+                                                                                    <button type="button"
+                                                                                            class="btn btn-default btn-flat btn-underline"
+                                                                                            data-toggle="dropdown"
+                                                                                            style="padding-left: 0px;">
+                                                                                        <span class="text-info-dk m-r-xs">30 Minutes</span>
+                                                                                        <span class="caret"></span>
+                                                                                    </button>
+                                                                                    <ul class="dropdown-menu">
+                                                                                        <li><a href="">15 Minutes</a>
+                                                                                        </li>
+                                                                                        <li><a href="">30 Minutes</a>
+                                                                                        </li>
+                                                                                        <li><a href="">45 Minutes</a>
+                                                                                        </li>
+                                                                                        <li><a href="">1 Hour</a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="col-md-5">
+                                                                            <div class=" m-t ">
+                                                                                <div class="h5">
+                                                                                    Add an attendee
+                                                                                </div>
+                                                                                <div class="">
+                                                                                    <a href="#"
+                                                                                       class="btn btn-flat btn-underline">
+                                                                                        <i class="fa fa-plus fa-fw text-muted"></i>
+                                                                                        <span class="text-info-dk m-l-xs">Add a Contacts</span>
+                                                                                    </a>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <div class="bg-light panel-body">
+                                                                    <button class="btn btn-success btn-sm">
+                                                                        Save
+                                                                    </button>
+
+                                                                    <button class="btn btn-sm bg-white text-danger b-danger m-l-sm">
+                                                                        Cancel
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="panel panel-default" id="lead_next_actions">
+                                            <div class="panel-heading">
+                                                Next Actions
+                                            </div>
+                                            <div class="panel-body ">
+                                                <span class="label label-warning"
+                                                      style="padding: 0;width: 65px;display: inline-block;position: relative;height: 18px;border-radius: .25em 0px 0px .25em;">
+                                                    <span style="padding: 4px 6px;display: inline-block;">April 12</span>
+                                                    <i class="fa  fa-caret-left"
+                                                       style="font-size: 30px;padding: 0;position: absolute;right: -1px;top: -6px;color: #fff;"></i>
+                                                </span>
+
+                                                <span class="m-l">activity title goes here for April 12th</span>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default" id="lead_next_subscriptions">
+                                            <div class="panel-heading">
+                                                Subscriptions
+                                            </div>
+                                            <div class="panel-body">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Verification Log
+                                            </div>
+                                            <div class="panel-body">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Open Activities
+                                            </div>
+                                            <div class="">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                    <tr>
+                                                        <th><a>Subject </a></th>
+                                                        <th><a>Activity Type </a></th>
+                                                        <th><a>Status </a></th>
+                                                        <th><a>Due Date </a></th>
+                                                        <th><a>From </a></th>
+                                                        <th><a>To </a></th>
+                                                        <th><a>Call Start Time </a></th>
+                                                        <th><a>Activity Owner </a></th>
+                                                        <th><a>Modified Time </a></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="/crm/EntityInfo.do?id=2435071000000159001&amp;module=Tasks">adding
+                                                                a task to contact BlueKite</a></td>
+                                                        <td>Tasks</td>
+                                                        <td>Not Started</td>
+                                                        <td>Apr 7, 2017</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td><span>arun.meena</span></td>
+                                                        <td>Apr 7, 2017 10:22 AM</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Campaigns
+                                            </div>
+                                            <div class="panel-body">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Attachments
+                                            </div>
+                                            <div class="panel-body">
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div id="lead-history-block" class="tab-pane wrapper lead-history-block">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="wrapper">
+                                                    <h3 class="m-b-lg">History</h3>
+
+                                                    <ul class="timeline">
+                                                        <li class="tl-header">
+                                                            <div class="btn btn-info">Now</div>
+                                                        </li>
+                                                        <li class="tl-item">
+                                                            <div class="tl-wrap b-info">
+                                                                <span class="tl-date">5s ago</span>
+                                                                <div class="tl-content">
+                                                                    Just a title
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="tl-item">
+                                                            <div class="tl-wrap">
+                                                                <span class="tl-date">2h ago</span>
+                                                                <div class="tl-content panel padder b-a">
+                                                                    <span class="arrow left pull-up"></span>
+                                                                    <div>Content in a panel</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="tl-item tl-left">
+                                                            <div class="tl-wrap b-success">
+                                                                <span class="tl-date">7:30 am</span>
+                                                                <div class="tl-content panel bg-success padder">
+                                                                    <span class="arrow arrow-success left pull-up hidden-left"></span>
+                                                                    <span class="arrow arrow-success right pull-up visible-left"></span>
+                                                                    <div class="text-lt">Oh! Colorful</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="tl-item">
+                                                            <div class="tl-wrap b-primary">
+                                                                <!--<span class="tl-date h4">April, 2017</span>-->
+                                                                <div class="tl-content h4">
+                                                                    April, 2017
+                                                                </div>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="tl-item">
+                                                            <div class="tl-wrap b-primary">
+                                                                <span class="tl-date">04.2014</span>
+                                                                <div class="tl-content panel padder b-a w-md w-auto-xs">
+                                                                    <span class="arrow left pull-up"></span>
+                                                                    <div class="text-lt m-b-sm">With Title</div>
+                                                                    <div class="panel-body pull-in b-t b-light">
+                                                                        <a href=""
+                                                                           class="thumb pull-right m-l m-t-xs avatar">
+                                                                            <img src="img/a4.jpg" alt="...">
+                                                                            <i class="on md b-white bottom"></i>
+                                                                        </a>
+                                                                        <div class="clear">
+                                                                            <a href=""
+                                                                               class="text-primary block m-b-xs">@Mike
+                                                                                Mcalidek <i
+                                                                                        class="icon-twitter"></i></a>
+                                                                            <a href=""
+                                                                               class="btn btn-addon btn-sm btn-primary m-t-xs"><i
+                                                                                    class="fa fa-eye"></i> Follow</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="tl-item tl-left">
+                                                            <div class="tl-wrap b-primary">
+                                                                <span class="tl-date">04.2014</span>
+                                                                <div class="tl-content panel padder b-a block">
+                                                                    <span class="arrow left pull-up hidden-left"></span>
+                                                                    <span class="arrow right pull-up visible-left"></span>
+                                                                    <!--<div class="text-lt m-b-sm">Block</div>-->
+                                                                    <div class="panel-body pull-in"
+                                                                         style="padding: 5px 15px;">
+                                                                        <div class="media">
+                                                                            <span class="thumb-sm pull-left avatar m-t-xs"><img
+                                                                                    src="img/a2.jpg" alt="..."></span>
+                                                                            <div class="media-body">
+                                                                                <!--<div class="pull-right text-center text-muted">-->
+                                                                                <!--<strong class="h4">12:18</strong><br>-->
+                                                                                <!--<small class="label bg-light">pm</small>-->
+                                                                                <!--</div>-->
+                                                                                <a href="" class="h5">The lifecycle
+                                                                                    stage for <span class="font-bold">Arun Meena</span>
+                                                                                    was changed to "lead" by <span
+                                                                                            class="font-bold">arun.meena@gmail.com</a>
+                                                                                <small class="block text-muted text-base">
+                                                                                    March 10th at 7:16pm
+                                                                                </small>
+                                                                                <!--<small class="block m-t-sm">Sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.</small>-->
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="tl-header">
+                                                            <div class="btn btn-primary btn-rounded h4">April 2017</div>
+                                                        </li>
+                                                        <li class="tl-item">
+                                                            <div class="tl-wrap">
+                                                                <span class="tl-date">10.08.2013</span>
+                                                                <div class="tl-content panel padder b-a">
+                                                                    <span class="arrow left pull-up hidden-left"></span>
+                                                                    <span class="arrow right pull-up visible-left"></span>
+                                                                    <div class="text-lt">A good story to hear.</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="tl-header">
+                                                            <div class="btn btn-icon btn-rounded btn-default"><i
+                                                                    class="fa fa-twitter"></i></div>
+                                                        </li>
+                                                        <li class="tl-item tl-left">
+                                                            <div class="tl-wrap b-white">
+                                                                <span class="tl-date">5.07.2013</span>
+                                                                <div class="tl-content panel padder b-a">
+                                                                    <span class="arrow left pull-up hidden-left"></span>
+                                                                    <span class="arrow right pull-up visible-left"></span>
+                                                                    <div class="text-lt">Yesterday is History</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="tl-header">
+                                                            <div class="btn btn-sm btn-default btn-rounded">more</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- /content -->
+
+    <!-- footer -->
+    <div class="footer navbar navbar-fixed-bottom bg-light lt b-t m-n">
+        <ul class="nav nav-tabs nav-md pull-left ng-scope">
+            <li><a href=""><i class="icon-star m-r-xs"></i> Getting Started</a></li>
+            <li><a href=""><i class="icon-question m-r-xs"></i> Help Center</a></li>
+            <li><a href=""><i class="icon-earphones-alt m-r-xs"></i> Contact Us</a></li>
+
+        </ul>
+        <ul class="nav nav-tabs nav-md pull-right ng-scope no-border m-n">
+            <li class="dropdown dropup b-l" dropdown="">
+                <a href="" class="dropdown-toggle m-n" data-toggle="dropdown" aria-expanded="false">
+                    <i class=" icon-clock" style="font-size: 16px;"></i></a>
+                <div class="dropdown-menu w-xl pull-right"><!-- animated fadeIn -->
+                    <div class="panel bg-white">
+                        <div class="panel-heading b-light bg-light ">
+                            <strong>Recent Items</strong>
+                        </div>
+                        <div class="list-group">
+                            <a href="" class="list-group-item">
+                                <span class="pull-left m-r thumb-sm">
+                                  <img src="img/a0.jpg" alt="..." class="img-circle">
+                                </span>
+                                <span class="clear block m-b-none">
+                                  Use awesome animate.css<br>
+                                  <small class="text-muted">10 minutes ago</small>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                    <i class="fa fa-phone-square fa-fw m-r text-md"></i> latest lead<br>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                  <i class="fa fa-paper-plane-o fa-fw m-r text-md"></i> product asdf<br>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                  1.0 initial released<br>
+                                    <small class="text-muted">1 hour ago</small>
+                                </span>
+                            </a>
+                            <a href="" class="list-group-item">
+                                <span class="clear block m-b-none">
+                                  1.0 initial released<br>
+                                    <small class="text-muted">1 hour ago</small>
+                                </span>
+                            </a>
+                        </div>
+                        <!--<div class="panel-footer text-sm">-->
+                        <!--<a href="" class="pull-right"><i class="fa fa-cog"></i></a>-->
+                        <!--<a href="#notes" data-toggle="class:show animated fadeInRight">See all the-->
+                        <!--notifications</a>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </li>
+            <li class="hidden-xs b-l">
+                <a class="js-toggle-requestfullscreen">
+                    <i class="fa fa-expand fa-fw "></i>
+                </a>
+                <a class="js-toggle-exitfullscreen" style="display:none;">
+                    <i class="fa fa-compress fa-fw "></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- / footer -->
+
+
+</div>
+
+
+<div class="modal fade" id="lead-field-select-modal" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Select Lead fields to view</h4>
+            </div>
+
+            <div class="b-b b-light" style="padding: 15px;">
+                <input type="text" class="form-control" style="" placeholder="search field name">
+            </div>
+
+            <div class="modal-body">
+
+                <ul ui-jq="sortable" class="list-group gutter list-group-lg list-group-sp">
+
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]" checked disabled><i></i></label>
+                            First Name <span class="text-danger">*</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]" checked disabled><i></i></label>
+                            Last Name <span class="text-danger">*</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]" checked><i></i></label>
+                            Lead Status
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]" checked><i></i></label>
+                            Lead Score
+                        </div>
+                    </li>
+
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Mobile
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Email
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Created By
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Created Date
+                        </div>
+                    </li>
+
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            DOB
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            City
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Lead Owner
+                        </div>
+                    </li>
+                    <li class="list-group-item" draggable="true">
+                        <span class="pull-right drag-holder"><i class="fa fa-sort text-muted fa m-r-sm"></i> </span>
+                        <div class="clear">
+                            <label class="i-checks i-checks-sm m-b-none m-r-xs">
+                                <input type="checkbox" name="post[]"><i></i></label>
+                            Last Contacted
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script src="../libs/jquery/jquery/dist/jquery.js"></script>
+<script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/ui-load.js"></script>
+<script src="js/ui-jp.config.js"></script>
+<script src="js/ui-jp.js"></script>
+<script src="js/ui-nav.js"></script>
+<script src="js/ui-toggle.js"></script>
+<script src="js/ui-client.js"></script>
+<script src="js/jquery.fullscreen.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+
+<script>
+    $(".js-collapse-filter-box").click(function (e) {
+        e.preventDefault();
+
+        $(".filter-box").hide();
+
+        $(".js-collapse-filter-box").hide();
+        $(".js-expand-filter-box").show();
+
+    });
+
+    $(".js-expand-filter-box").click(function (e) {
+        e.preventDefault();
+
+        $(".filter-box").show();
+
+        $(".js-collapse-filter-box").show();
+        $(".js-expand-filter-box").hide();
+    });
+
+    $(".select-lead").click(function (e) {
+        if ($(this).is(':checked')) {
+            // selected
+            $(".lead-selected-actions-box").show();
+            $(".lead-list-actions-box").hide();
+        }
+        else {
+            // unselected
+            $(".lead-list-actions-box").show();
+            $(".lead-selected-actions-box").hide();
+        }
+
+    });
+
+    $(".js-lead-list-fields-select").click(function (e) {
+        e.preventDefault();
+
+        $("#lead-field-select-modal").modal();
+
+    });
+
+    $(function () {
+        // check native support
+//        $('#support').text($.fullscreen.isNativelySupported() ? 'supports' : 'doesn\'t support');
+        // open in fullscreen
+        $('a.js-toggle-requestfullscreen').click(function () {
+            $('body').fullscreen();
+            return false;
+        });
+        // exit fullscreen
+        $('a.js-toggle-exitfullscreen').click(function () {
+            $.fullscreen.exit();
+            return false;
+        });
+        // document's event
+        $(document).bind('fscreenchange', function (e, state, elem) {
+            // if we currently in fullscreen mode
+            if ($.fullscreen.isFullScreen()) {
+                $('a.js-toggle-requestfullscreen').hide();
+                $('a.js-toggle-exitfullscreen').show();
+            } else {
+                $('a.js-toggle-requestfullscreen').show();
+                $('a.js-toggle-exitfullscreen').hide();
+            }
+            $('#state').text($.fullscreen.isFullScreen() ? '' : 'not');
+        });
+    });
+
+    $(document).ready(function () {
+
+        $('.datepicker').datetimepicker({
+            format: 'L'
+        });
+        $('.timepicker').datetimepicker({
+            format: 'LT'
+        });
+
+        $(".lead-detail-action-blocks .tab-pane div[ui-jq='wysiwyg']").on("focus", function (e) {
+            $(this).closest(".tab-pane").css("height", "auto");
+            $(this).closest(".tab-pane").css("overflow", "auto");
+        });
+
+        $(".lead-detail-action-blocks a[data-toggle='tab']").on("click", function (e) {
+            $(".lead-detail-action-blocks .tab-content.hide").removeClass("hide");
+        });
+
+    });
+
+
+</script>
+
+</body>
+</html>

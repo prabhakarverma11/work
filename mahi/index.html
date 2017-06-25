@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place searches</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            /*margin: 10px 20px;*/
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+        var map;
+        var infowindow;
+        var delhiLat = 28.612308;
+        var delhiLng = 77.231054;
+        var data = [];
+        function initMap() {
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: delhiLat, lng: delhiLng},
+                zoom: 10
+            });
+
+            infowindow = new google.maps.InfoWindow();
+
+            var request = {
+                location: {lat: 28.4286476, lng: 76.8692109},
+                radius: '50',
+                query: "Swachh Public Toilet",
+                type: ['establishment']
+            };
+
+
+            var service = new google.maps.places.PlacesService(map);
+
+            service.getDetails({placeId: "ChIJBeGb8XniDDkR1VQFR7D67Vc"}, callback);
+
+//            createMarker({
+//                geometry: {location: {lat: parseFloat(delhiLat), lng: parseFloat(delhiLng)}},
+//                name: "prabhakar"
+//            });
+//            $.ajax({
+//                type: "GET",
+//                url: "data.txt",
+//                dataType: "text",
+//                success: function (data) {
+//                    processData(data);
+//                }
+//            });
+        }
+        //        function processData(data) {
+        //            var dataArr = data.split("\n");
+        //            var count = 0;
+        //            dataArr.forEach(function (item) {
+        //                var lat = item.split(",")[0];
+        //                var lng = item.split(",")[1];
+        //                count++;
+        //                var request = {
+        //                    location: {lat: parseFloat(lat), lng: parseFloat(lng)},
+        //                    radius: '50',
+        //                    query: "Swachh Public Toilet"
+        //                };
+        //
+        //                var service = new google.maps.places.PlacesService(map);
+        //
+        //                service.search(request, callback);
+        //            });
+        //        }
+
+        function callback(results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                console.log(results);
+                var marker = results[0] ? results[0].geometry && new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    }) : null;
+            }
+        }
+
+        function createMarker(place) {
+            console.log("place", place);
+            var placeLoc = place.geometry.location;
+            var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.setContent('<p>Marker Location:' + marker.getPosition() + '</p>');
+                infowindow.open(map, this);
+            });
+        }
+    </script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+
+    <script type="text/javascript">
+        function myfun() {
+            var delhiLat = 28.7041;
+            var delhiLong = 77.1025;
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: delhiLat, lng: delhiLong},
+                zoom: 16
+            });
+            $.ajax({
+                type: "GET",
+                url: "data.txt",
+                dataType: "text",
+                success: function (data) {
+                    processData(data);
+                }
+            });
+        }
+
+        //        function processData(data) {
+        //            var dataArr = data.split("\n");
+        //            alert(dataArr[0]);
+        //            var placeLoc = [28.4286476, 76.8692109];
+        //            var marker = new google.maps.Marker({
+        //                map: map,
+        //                position: {lat: 28.4286476, lng: 76.8692109}
+        //            });
+        //            var infowindow = new google.maps.InfoWindow({
+        //                content: '<p>Marker Location:' + marker.getPosition() + '</p>'
+        //            });
+        //
+        //            google.maps.event.addListener(marker, 'click', function () {
+        //                infowindow.open(map, marker);
+        //            });
+        //        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE6hMNFUb_MgX1aVvtnpAu52mS_9pZ_Zs&libraries=places&callback=initMap"
+            async defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+<div class="row" style="height: 10%"></div>
+<div class="row" style="height: 85%">
+    <div id="map" class="col-md-6"></div>
+    <div class="col-md-6">
+        <div>Rating: 4.4</div>
+        <div>Reviews:
+            <div style="border: 1px solid black; max-height: 400px; overflow: scroll">
+                <ul>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                    <li>hdsadsa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
